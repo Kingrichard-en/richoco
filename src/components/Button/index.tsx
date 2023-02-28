@@ -13,6 +13,7 @@ interface ButtonProps {
   fontSize?: string;
   borderRadius?: string;
   textTransform?: Property.TextTransform | undefined;
+  border?: string;
 }
 const Button: React.FC<ButtonProps> = ({
   text,
@@ -24,6 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   height,
   fontSize,
   textTransform = "initial",
+  border,
   borderRadius,
   ...styles
 }) => {
@@ -35,12 +37,12 @@ const Button: React.FC<ButtonProps> = ({
     fontSize: fontSize || "2rem",
     fontFamily: "'Avenir' sans-serif",
     borderRadius: borderRadius || "0px",
-    fontWeight: "100",
-    border: "1px solid #0A0A0A",
+    fontWeight: "400",
+    border: border || "1px solid #0A0A0A",
     ...styles,
   };
   return (
-    <MuiButton style={{ ...Btnstyles }} onSubmit={onSubmit}>
+    <MuiButton style={{ ...Btnstyles }} onClick={onSubmit}>
       {/* {addon && <img src={addon} alt="" style={{ paddingRight: "10px" }} />} */}
       <span style={{ textTransform: textTransform }}>{text}</span>
     </MuiButton>

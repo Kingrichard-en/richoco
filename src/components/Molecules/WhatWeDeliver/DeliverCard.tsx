@@ -25,7 +25,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
         color: textColor,
       }}
     >
-      <CardTitle style={{}}>{title}</CardTitle>
+      <CardTitle>{title}</CardTitle>
       <p>{description}</p>
 
       <ul>

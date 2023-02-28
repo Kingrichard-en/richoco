@@ -1,5 +1,6 @@
 import HowWeDeliver from "@/components/Molecules/HowWeDeliver";
 import HomePageHero from "@/components/Molecules/Jumbo";
+import Projects from "@/components/Molecules/Jumbo/Projects";
 import WhatWeDeliver from "@/components/Molecules/WhatWeDeliver";
 import Applayout from "@/layout/AppLayout";
 import { styled } from "@mui/material";
@@ -34,6 +35,8 @@ export default function Home() {
         </ArrowDown>
         <HowWeDeliver />
         <WhatWeDeliver />
+        <Projects />
+        <Crafts/>
       </HomePageWrapper>
     </Applayout>
   );
