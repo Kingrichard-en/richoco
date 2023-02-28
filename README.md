@@ -1,13 +1,13 @@
 richoco
 
 ```bash
-
 git clone https://github.com/Kingrichard-en/richoco.git
+```
 
+```bash
 yarn install
-# or
-yarn ci
+```
 
+```bash
 yarn dev
-`
 ```
