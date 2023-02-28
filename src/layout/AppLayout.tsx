@@ -1,3 +1,4 @@
+import { styled } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 
@@ -6,6 +7,11 @@ interface ApplayoutProps {
   titleTag?: string;
 }
 
+const PageBody = styled("div")(() => ({
+  height: "100vh",
+  // width: "100vw",
+}));
+
 export const Applayout: React.FC<ApplayoutProps> = ({ children, titleTag }) => {
   const title = titleTag ? `${titleTag} | Richoco` : "Richoco";
   return (
@@ -13,7 +19,7 @@ export const Applayout: React.FC<ApplayoutProps> = ({ children, titleTag }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      {children}
+      <PageBody>{children}</PageBody>
     </>
   );
 };
