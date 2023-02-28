@@ -3,17 +3,15 @@ import React from "react";
 
 interface ApplayoutProps {
   children: React.ReactNode;
-  titleTag: string;
+  titleTag?: string;
 }
 
 export const Applayout: React.FC<ApplayoutProps> = ({ children, titleTag }) => {
+  const title = titleTag ? `${titleTag} | Richoco` : "Richoco";
   return (
     <>
       <Head>
-        <title> {titleTag} | Richoco</title>
-        <meta name="description" content="Richoco Studio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/rlogo.jpeg" />
+        <title>{title}</title>
       </Head>
       {children}
     </>
