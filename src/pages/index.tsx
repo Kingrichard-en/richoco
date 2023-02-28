@@ -1,6 +1,8 @@
+import Crafts from "@/components/Molecules/Crafts";
 import HowWeDeliver from "@/components/Molecules/HowWeDeliver";
 import HomePageHero from "@/components/Molecules/Jumbo";
 import Projects from "@/components/Molecules/Jumbo/Projects";
+import Testimonials from "@/components/Molecules/Testimonials";
 import WhatWeDeliver from "@/components/Molecules/WhatWeDeliver";
 import Applayout from "@/layout/AppLayout";
 import { styled } from "@mui/material";
@@ -36,7 +38,8 @@ export default function Home() {
         <HowWeDeliver />
         <WhatWeDeliver />
         <Projects />
-        <Crafts/>
+        <Crafts />
+        <Testimonials />
       </HomePageWrapper>
     </Applayout>
   );

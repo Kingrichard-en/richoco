@@ -23,7 +23,7 @@ export const HomePageHero: React.FC<indexProps> = ({}) => {
           idea leave the brain work to us. we believe in product led growth!.
         </HeroSubText>
         <HeroCTA>
-          <Button text="Go bespoke" background="#0A0A0A" borderRadius="28px" />
+          <Button text="Go bespoke!" background="#0A0A0A" borderRadius="28px" />
           <Button
             text="Contact us"
             background="#FFFFFF"

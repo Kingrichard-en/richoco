@@ -39,7 +39,7 @@ const HowWeDeliverWrapper = styled("div")(() => ({
   alignItems: "center",
   width: "70%",
   margin: "0 auto",
-  marginTop: '3rem'
+  marginTop: '4rem'
 }));
 const SectionImage = styled("div")(() => ({
   "& img": {
