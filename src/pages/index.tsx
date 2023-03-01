@@ -65,10 +65,10 @@ export default function Home() {
         )}
         <HowWeDeliver isMobile={isMobile} />
         <WhatWeDeliver isMobile={isMobile} />
-        <Projects isMobile={isMobile}/>
-        <Crafts isMobile={isMobile}/>
-        <Testimonials isMobile={isMobile}/>
-        <Footer isMobile={isMobile}/>
+        <Projects isMobile={isMobile} />
+        <Crafts isMobile={isMobile} />
+        <Testimonials isMobile={isMobile} />
+        <Footer isMobile={isMobile} />
       </HomePageWrapper>
     </Applayout>
   );

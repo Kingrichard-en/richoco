@@ -47,7 +47,7 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
           />
         </TipsContent>
       </Tips>
-      <MainFooter style={{ padding: isMobile ? "7rem 4rem" : "20rem" }}>
+      <MainFooter style={{ padding: isMobile ? "7rem 4rem" : "20rem 20rem 2rem" }}>
         <Image
           src={logoLgWhite}
           alt="logo"
@@ -96,7 +96,7 @@ const FooterWrapper = styled("div")(() => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  overflowX: "hidden",
+  overflow: "hidden",
 }));
 
 const Tips = styled("div")(() => ({
