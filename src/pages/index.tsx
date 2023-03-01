@@ -1,4 +1,5 @@
 import Crafts from "@/components/Molecules/Crafts";
+import Footer from "@/components/Molecules/Footer";
 import HowWeDeliver from "@/components/Molecules/HowWeDeliver";
 import HomePageHero from "@/components/Molecules/Jumbo";
 import Projects from "@/components/Molecules/Jumbo/Projects";
@@ -40,6 +41,7 @@ export default function Home() {
         <Projects />
         <Crafts />
         <Testimonials />
+        <Footer />
       </HomePageWrapper>
     </Applayout>
   );
