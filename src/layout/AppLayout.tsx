@@ -10,7 +10,7 @@ interface ApplayoutProps {
 const PageBody = styled("div")(() => ({
   height: "100vh",
   // width: "100vw",
-  overflowX: "hidden",
+  // overflowX: "hidden",
 }));
 
 export const Applayout: React.FC<ApplayoutProps> = ({ children, titleTag }) => {
