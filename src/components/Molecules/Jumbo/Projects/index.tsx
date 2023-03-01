@@ -2,6 +2,7 @@ import { styled } from "@mui/material";
 import React from "react";
 
 import checkinCS from "../../../../assets/case-studies/checkin-web.png";
+import checkinMb from "../../../../assets/case-studies/checkin-mobile.png";
 import stovooCS from "../../../../assets/case-studies/stovoo-web.png";
 import ethaCS from "../../../../assets/case-studies/etha-web.png";
 import mamiCS from "../../../../assets/case-studies/mami-web.png";
@@ -21,7 +22,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       name: "CheckIn",
       description:
         "See how affordable booking process have been optimized. Vacation now made easy!",
-      image: checkinCS,
+      image: isMobile ? checkinMb :  checkinCS,
       url: "https://usecheckin.com",
     },
     {

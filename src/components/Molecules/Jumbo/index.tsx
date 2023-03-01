@@ -3,6 +3,7 @@ import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import heroIllustration from "../../../assets/images/hero-illustration.svg";
+import heroIllustrationMb from "../../../assets/images/hero-illustration-mb.svg";
 import heroJumbo from "../../../assets/images/hero-jumbo-text.svg";
 import richocoSmBlack from "../../../assets/images/logo-sm-black.svg";
 import Button from "../../Button";
@@ -87,13 +88,18 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
         <HeroIllustration
           style={{
             borderRadius: isMobile ? 0 : "0px 0px 0px 100px",
-            padding: isMobile ? 9 : "5rem",
+            padding: isMobile ? '2rem' : "5rem",
+            margin: "0 auto",
           }}
         >
           <Image
             alt="illustration"
-            src={heroIllustration}
-            style={{ width: isMobile ? "353px" : "100%", height: "447px" }}
+            src={isMobile ? heroIllustrationMb : heroIllustration}
+            style={{
+              width: isMobile ? "363px" : "95%",
+              height: isMobile ? "447px" : "auto",
+              padding: isMobile ? "1rem" : "5rem",
+            }}
           />
         </HeroIllustration>
       </HeroIllustrationWrapper>
