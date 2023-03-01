@@ -53,7 +53,7 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             We design and develop captivating Brand Identities and influential
             Digital Products for innovative companies around the world. Using
             the industry-proven Standards and Design Sprint, with our reliant
-            remote team, we've developed a highly optimized design delivery
+            remote team, we have developed a highly optimized design delivery
             process that brings results in just a few weeks. Sounds like what
             you’re looking for?
           </p>

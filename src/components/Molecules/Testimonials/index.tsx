@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { Box, BoxProps, styled, Theme } from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,7 +9,12 @@ import arrowLeft from "../../../../public/images/arrowLeft.svg";
 import arrowRight from "../../../../public/images/arrowRight.svg";
 import Flex from "@/components/Flex";
 import Image from "next/image";
+import { MUIStyledCommonProps } from "@mui/system";
 interface indexProps {
+  isMobile: boolean;
+}
+
+interface CustomComponentProps extends MUIStyledCommonProps<Theme> {
   isMobile: boolean;
 }
 
@@ -236,6 +241,7 @@ const arrowStyles = (isMobile: boolean) => {
     "&>img": {
       width: "10px",
     },
+
     "&:before": {
       width: 0,
       content: "''",
@@ -248,9 +254,9 @@ const arrowStyles = (isMobile: boolean) => {
   };
 };
 
-const SliderWrapper = styled("div", {
+const SliderWrapper = styled('div', {
   shouldForwardProp: (prop) => prop !== "isMobile",
-})(({ isMobile }) => ({
+})<BoxProps & { isMobile: boolean }>(({ theme, isMobile }) => ({
   //   width: '90%!important',
   ".slick-track": {
     // width: "100%!important",
@@ -276,7 +282,7 @@ const SliderWrapper = styled("div", {
   },
 
   //   },
-}));
+})) as any;
 
 const TestimonialCard = styled("div")(() => ({
   cursor: "move",

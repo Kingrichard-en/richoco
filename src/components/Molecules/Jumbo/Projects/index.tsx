@@ -88,7 +88,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
         >
           We design compelling Brand Identities and impactful Digital
           Experiences for innovative companies around the world. Using the
-          industry-proven methods Jobs to be Done and Design Sprint, we've
+          industry-proven methods Jobs to be Done and Design Sprint, we have
           developed a highly optimised design delivery process that brings
           results in just a few weeks. Sounds like what you’re looking for?
         </p>
