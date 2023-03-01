@@ -4,7 +4,7 @@ import React from "react";
 import logoLgWhite from "../../..//assets/images/logo-lg-White.svg";
 import phone from "../../..//assets/images/phone.svg";
 import ig from "../../..//assets/images/ig.svg";
-import linkedin from "../../..//assets/images/linkedin.svg";
+import linkedin from "../../../assets/images/linkedin.svg";
 import instalogo from "../../..//assets/images/instalogo.png";
 import tree from "../../..//assets/images/tree.svg";
 import Button from "@/components/Button";
