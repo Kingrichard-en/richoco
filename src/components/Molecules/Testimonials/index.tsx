@@ -165,6 +165,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     <TestimonialsWrapper
       style={{
         padding: isMobile ? "5rem 0 0 2rem" : "10rem 0 10rem 10rem",
+        height: isMobile ? "85rem" : "auto",
       }}
     >
       <h1
@@ -181,8 +182,11 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
       </p>
       <SliderWrapper
         style={{
-          margin: isMobile ? '2rem 0' : "10rem 0",
+          margin: isMobile ? "2rem 0" : "10rem 0",
+
+          // '& .slick-slide': {}
         }}
+        isMobile={isMobile}
       >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
@@ -205,6 +209,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
 
 const TestimonialsWrapper = styled("div")(() => ({
   background: "#F6F6F6",
+
   "& p": {
     fontSize: "1.5rem",
     fontWeight: 400,
@@ -214,34 +219,38 @@ const TestimonialsWrapper = styled("div")(() => ({
   },
 }));
 
-const arrowStyles = {
-  top: "140% !important",
-  cursor: "pointer",
-  border: "1px solid #505050",
-  borderRadius: "50%",
-  // padding: "1rem",
-  height: "6rem",
-  width: "6rem",
-  display: "flex!important",
-  alignItems: "center",
-  justifyContent: "center",
-  zIndex: 10,
-  // height: '100%',
-  "&>img": {
-    width: "10px",
-  },
-  "&:before": {
-    width: 0,
-    content: "''",
-  },
+const arrowStyles = (isMobile: boolean) => {
+  return {
+    top: isMobile ? "115%!important" : "140% !important",
+    cursor: "pointer",
+    border: "1px solid #505050",
+    borderRadius: "50%",
+    // padding: "1rem",
+    height: "6rem",
+    width: "6rem",
+    display: "flex!important",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 10,
+    // height: '100%',
+    "&>img": {
+      width: "10px",
+    },
+    "&:before": {
+      width: 0,
+      content: "''",
+    },
 
-  "&.slick-disabled": {
-    border: "none!important",
-    cursor: "not-allowed",
-  },
+    "&.slick-disabled": {
+      border: "none!important",
+      cursor: "not-allowed",
+    },
+  };
 };
 
-const SliderWrapper = styled("div")(() => ({
+const SliderWrapper = styled("div", {
+  shouldForwardProp: (prop) => prop !== "isMobile",
+})(({ isMobile }) => ({
   //   width: '90%!important',
   ".slick-track": {
     // width: "100%!important",
@@ -258,12 +267,12 @@ const SliderWrapper = styled("div")(() => ({
     marginRight: "2rem",
   },
   ".slick-prev": {
-    left: "42% !important",
-    ...arrowStyles,
+    left: isMobile ? "30%!important" : "42% !important",
+    ...arrowStyles(isMobile),
   },
   ".slick-next": {
-    right: "48% !important",
-    ...arrowStyles,
+    right: isMobile ? "30%!important" : "48% !important",
+    ...arrowStyles(isMobile),
   },
 
   //   },
