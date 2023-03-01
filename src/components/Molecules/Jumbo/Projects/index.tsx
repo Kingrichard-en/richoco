@@ -11,9 +11,11 @@ import vorroCS from "../../../../../public/case-studies/vorro-web.png";
 import Image from "next/image";
 import Button from "@/components/Button";
 
-interface indexProps {}
+interface indexProps {
+  isMobile: boolean;
+}
 
-export const Projects: React.FC<indexProps> = ({}) => {
+export const Projects: React.FC<indexProps> = ({ isMobile }) => {
   const projects = [
     {
       name: "CheckIn",
@@ -67,10 +69,23 @@ export const Projects: React.FC<indexProps> = ({}) => {
   ];
 
   return (
-    <ProjectWrapper>
+    <ProjectWrapper style={{ paddingTop: isMobile ? "7rem" : "10rem" }}>
       <ProjectsHeader>
-        <h1>Projects and case study</h1>
-        <p>
+        <h1
+          style={{
+            fontSize: isMobile ? "4rem" : "4.8rem",
+            width: isMobile ? "60%" : "100%",
+            margin: "0 auto",
+          }}
+        >
+          Projects and case study
+        </h1>
+        <p
+          style={{
+            maxWidth: isMobile ? "90%" : "50%",
+            lineHeight: "2.3rem",
+          }}
+        >
           We design compelling Brand Identities and impactful Digital
           Experiences for innovative companies around the world. Using the
           industry-proven methods Jobs to be Done and Design Sprint, we've
@@ -78,10 +93,24 @@ export const Projects: React.FC<indexProps> = ({}) => {
           results in just a few weeks. Sounds like what you’re looking for?
         </p>
       </ProjectsHeader>
-      <CaseStudies>
+      <CaseStudies
+        style={{ width: isMobile ? "95%" : "80%", margin: "0 auto" }}
+      >
         {projects.map((project, index) => (
-          <CaseStudy key={index}>
-            <section>
+          <CaseStudy
+            key={index}
+            style={{
+              flexDirection: isMobile ? "column" : "row",
+              height: isMobile ? '70rem' : "60rem",
+            }}
+          >
+            <section
+              style={{
+                width: isMobile ? "100%" : "35%",
+                marginTop: isMobile ? "5rem" : "10rem",
+                padding: isMobile ? "0 2rem" : "0 9rem",
+              }}
+            >
               <h1>{project.name}</h1>
               <p>{project.description}</p>
               <Button
@@ -92,13 +121,22 @@ export const Projects: React.FC<indexProps> = ({}) => {
                 border={"none"}
                 color={project?.url ? "#fff" : "#0A0A0A"}
                 borderRadius="28px"
-                fontSize="1.5rem"
                 onSubmit={() =>
                   project?.url ? window.open(project.url, "_blank") : null
                 }
+                fontSize={isMobile ? "1.6rem" : "1.5rem"}
+                width={isMobile ? "21rem" : "245px"}
+                height={isMobile ? "4.8rem" : "56px"}
               />
             </section>
-            <Image src={project.image} alt={project.name} />
+            <Image
+              src={project.image}
+              alt={project.name}
+              style={{
+                width: isMobile ? "100%" : "65%",
+                marginTop: isMobile ? "2rem" : 0
+              }}
+            />
           </CaseStudy>
         ))}
       </CaseStudies>
@@ -109,22 +147,22 @@ export const Projects: React.FC<indexProps> = ({}) => {
 const ProjectWrapper = styled("div")(() => ({
   marginTop: "12rem",
   background: "#0A0A0A",
-  paddingTop: "10rem",
-  paddingBottom: "2rem"
+
+  paddingBottom: "2rem",
 }));
 
 const ProjectsHeader = styled("div")(() => ({
   textAlign: "center",
   "& h1": {
     color: "#fff",
-    fontSize: "4.8rem",
+
     fontWeight: 700,
   },
   "& p": {
     color: "#fff",
     fontSize: "1.6rem",
     fontWeight: 300,
-    maxWidth: "50%",
+
     letterSpacing: "0px",
     margin: "3rem auto",
   },
@@ -135,18 +173,13 @@ const CaseStudies = styled("div")(() => ({
 }));
 
 const CaseStudy = styled("div")(() => ({
-  width: "80%",
-  height: "60rem",
   display: "flex",
   borderRadius: "16px",
   alignItems: "center",
   margin: "10rem auto",
-
+  overflow: "hidden",
   background: "#F8F8F8",
   "& section": {
-    width: "35%",
-    marginTop: "10rem",
-    padding: "0 9rem",
     "& h1": {
       color: "#0A0A0A",
       fontSize: "4.8rem",
@@ -162,7 +195,6 @@ const CaseStudy = styled("div")(() => ({
     },
   },
   "& img": {
-    width: "65%",
     height: "100%",
   },
 }));

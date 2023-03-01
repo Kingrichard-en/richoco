@@ -7,6 +7,7 @@ interface DeliverCardProps {
   features: string[];
   bg?: string;
   check: StaticImageData;
+  isMobile: boolean;
 }
 
 export const DeliverCard: React.FC<DeliverCardProps> = ({
@@ -14,6 +15,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
   description,
   features,
   check,
+  isMobile,
   bg = "#FFFFFF",
 }) => {
   const textColor = bg === "#0A0A0A" ? "#F6F6F6" : "#505050";
@@ -24,6 +26,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
         padding: "3rem",
         borderRadius: "20px",
         color: textColor,
+        width: isMobile ? '100%' : "30%",
       }}
     >
       <CardTitle>{title}</CardTitle>
@@ -42,7 +45,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
 };
 
 const DeliverCardWrapper = styled("div")(({}) => ({
-  width: "30%",
+  
   "& p": {
     fontSize: "1.6rem",
     fontWeight: 400,

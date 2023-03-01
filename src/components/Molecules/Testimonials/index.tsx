@@ -9,9 +9,11 @@ import arrowLeft from "../../../../public/images/arrowLeft.svg";
 import arrowRight from "../../../../public/images/arrowRight.svg";
 import Flex from "@/components/Flex";
 import Image from "next/image";
-interface indexProps {}
+interface indexProps {
+  isMobile: boolean;
+}
 
-export const Testimonials: React.FC<indexProps> = ({}) => {
+export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
   const settings = {
     dots: false,
     autoplay: false,
@@ -20,7 +22,7 @@ export const Testimonials: React.FC<indexProps> = ({}) => {
     // slidesToScroll: 1,
     initialSlide: 0,
     // speed: 2000,
-    slidesPerRow: 2,
+    slidesPerRow: isMobile ? 1 : 2,
     adaptiveHeight: true,
     accessibility: true,
     infinite: false,
@@ -55,7 +57,7 @@ export const Testimonials: React.FC<indexProps> = ({}) => {
   const testimonials = [
     {
       id: 1,
-      name: "Melina Brono",
+      name: "Meli Brono",
       position: "Director at Spotify",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
@@ -64,7 +66,7 @@ export const Testimonials: React.FC<indexProps> = ({}) => {
 
     {
       id: 2,
-      name: "Amalia Brono",
+      name: "Amalia Jo",
       position: "CEO of ABC",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
@@ -160,13 +162,28 @@ export const Testimonials: React.FC<indexProps> = ({}) => {
   ];
 
   return (
-    <TestimonialsWrapper>
-      <h1>Job appreciations</h1>
+    <TestimonialsWrapper
+      style={{
+        padding: isMobile ? "5rem 0 0 2rem" : "10rem 0 10rem 10rem",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: isMobile ? "3.8rem" : "5rem",
+          fontWeight: 900,
+        }}
+      >
+        Job appreciations
+      </h1>
       <p>
         From various startups and brands across mobile, web, web3, Fintech
         related projects.
       </p>
-      <SliderWrapper>
+      <SliderWrapper
+        style={{
+          margin: isMobile ? '2rem 0' : "10rem 0",
+        }}
+      >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id}>
@@ -188,16 +205,12 @@ export const Testimonials: React.FC<indexProps> = ({}) => {
 
 const TestimonialsWrapper = styled("div")(() => ({
   background: "#F6F6F6",
-  padding: "10rem 0 10rem 10rem",
-  "& h1": {
-    fontSize: "5rem",
-    fontWeight: 900,
-  },
   "& p": {
     fontSize: "1.5rem",
     fontWeight: 400,
     color: "#4F4F4F",
     marginTop: "4rem",
+    lineHeight: "2.5rem",
   },
 }));
 
@@ -224,13 +237,11 @@ const arrowStyles = {
 
   "&.slick-disabled": {
     border: "none!important",
-    cursor: 'not-allowed'
+    cursor: "not-allowed",
   },
 };
 
 const SliderWrapper = styled("div")(() => ({
-  margin: "10rem 0",
-
   //   width: '90%!important',
   ".slick-track": {
     // width: "100%!important",

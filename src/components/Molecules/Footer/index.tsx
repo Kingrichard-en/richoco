@@ -8,15 +8,26 @@ import linkedin from "../../../../public/images/linkedin.svg";
 import instalogo from "../../../../public/images/instalogo.png";
 import tree from "../../../../public/images/tree.svg";
 import Button from "@/components/Button";
+import Flex from "@/components/Flex";
 
-interface indexProps {}
+interface indexProps {
+  isMobile: boolean;
+}
 
-export const Footer: React.FC<indexProps> = ({}) => {
+export const Footer: React.FC<indexProps> = ({ isMobile }) => {
   return (
     <FooterWrapper>
-      <Tips>
+      <Tips
+        style={{
+          flexDirection: isMobile ? "column" : "row",
+        }}
+      >
         <div>
-          <Image src={tree} alt="design tips and case studies" width="300" />
+          <Image
+            src={tree}
+            alt="design tips and case studies"
+            width={isMobile ? "350" : "400"}
+          />
         </div>
         <TipsContent>
           <Image
@@ -29,21 +40,51 @@ export const Footer: React.FC<indexProps> = ({}) => {
             Follow us on Instagram to get tips to help you grow your products
             learn more about our design process
           </TipsText>
-          <Button text="Go to instagram" border="1px solid #FFFFFF" borderRadius="28px" />
+          <Button
+            text="Go to instagram"
+            border="1px solid #FFFFFF"
+            borderRadius="28px"
+          />
         </TipsContent>
       </Tips>
-      <MainFooter>
-        <Image src={logoLgWhite} alt="logo" width={600} />
-        <p>
+      <MainFooter style={{ padding: isMobile ? "7rem 4rem" : "20rem" }}>
+        <Image
+          src={logoLgWhite}
+          alt="logo"
+          width={isMobile ? 350 : 600}
+          style={{
+            marginBottom: isMobile ? "5rem" : "10rem",
+          }}
+        />
+        <p style={{ marginBottom: "6rem" }}>
           © 2022 Richoco Studio · Branding & Creative Design Agency · Chaina
           Avenue Jaba, kano Nigeria.
         </p>
-        <div>
-          <Image src={phone} alt="logo" />
-          <p>Nigeria +234 80 6077 1255</p>
-          <Image src={linkedin} alt="logo" />
-          <Image src={ig} alt="logo" />
-        </div>
+
+        <Flex align={"center"} direction={isMobile ? "column" : "row"}>
+          {/* <div> */}
+          <p
+            style={{
+              borderRight: isMobile ? "none" : "1px solid #fff",
+              borderBottom: isMobile ? "1px solid #fff" : "none",
+              paddingBottom: isMobile ? "20px" : "0",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <Image src={phone} alt="logo" style={{ marginRight: "12px" }} />
+            Nigeria +234 80 6077 1255
+          </p>
+          {/* </div> */}
+          <div style={{ margin: isMobile ? "30px" : "0 20px" }}>
+            <Image
+              src={linkedin}
+              alt="logo"
+              width={90}
+              style={{ marginRight: isMobile ? "20px" : 0 }}
+            />
+            <Image src={ig} alt="logo" width={90} />
+          </div>
+        </Flex>
       </MainFooter>
     </FooterWrapper>
   );
@@ -55,6 +96,7 @@ const FooterWrapper = styled("div")(() => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  overflowX: "hidden",
 }));
 
 const Tips = styled("div")(() => ({
@@ -70,34 +112,30 @@ const MainFooter = styled("div")(() => ({
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  padding: "20rem",
-  paddingBottom: "1rem",
 
-  "& img": {
-    marginBottom: "10rem",
-  },
+  paddingBottom: "1rem",
 
   "& p": {
     color: "#fff",
     fontSize: "1.5rem",
     fontWeight: "400",
     padding: ".4rem 1rem",
+    textAlign: "center",
+    lineHeight: "2.5rem",
     // "&:first-of-type": {
     //   marginBottom: "2rem",
     // },
   },
 
   "& div": {
-    "& img": {
-      height: "2rem",
-      paddingLeft: "1rem",
-
+    "& div": {
+      "& img": {
+        height: "2rem",
+        paddingLeft: "1rem",
+      },
       "&:first-of-type": {
         width: "4rem",
       },
-    },
-    "& p": {
-      borderRight: "1px solid #fff",
     },
     display: "flex",
     justifyContent: "center",

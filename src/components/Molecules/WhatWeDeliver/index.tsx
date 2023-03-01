@@ -5,9 +5,11 @@ import DeliverCard from "./DeliverCard";
 import checkMark from "../../../../public/images/check.png";
 import checkWhite from "../../../../public/images/checkwhite.svg";
 
-interface indexProps {}
+interface indexProps {
+  isMobile: boolean;
+}
 
-export const WhatWeDeliver: React.FC<indexProps> = ({}) => {
+export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
   const items = [
     {
       title: "Branding",
@@ -68,7 +70,8 @@ export const WhatWeDeliver: React.FC<indexProps> = ({}) => {
           gap: "4rem",
           alignItems: "flex-start",
           margin: "0 auto",
-          width: "70%",
+          width: isMobile ? '95%' : "70%",
+          flexDirection: isMobile ? "column" : "row",
         }}
       >
         {items.map((item, index) => (
@@ -78,7 +81,8 @@ export const WhatWeDeliver: React.FC<indexProps> = ({}) => {
             features={item.features}
             bg={index === 2 ? "#0A0A0A" : "#fff"}
             key={index}
-            check={index ===2 ? checkWhite : checkMark}
+            isMobile={isMobile}
+            check={index === 2 ? checkWhite : checkMark}
           />
         ))}
       </div>
@@ -89,6 +93,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({}) => {
 const WhatWeDeliverWrapper = styled("div")(() => ({
   width: "100%",
   marginTop: "4rem",
+  overflowX: "hidden",
 }));
 
 export default WhatWeDeliver;

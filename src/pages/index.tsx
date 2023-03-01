@@ -31,10 +31,9 @@ export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
   const { isMobile } = useScreenResolution();
   const handleScroll = () => {
-    console.log('top: ', ref)
+    console.log("top: ", ref);
     if (ref.current) {
       const top = Math.abs(ref.current.getBoundingClientRect().top);
-      console.log(isSticky);  
       setSticky(top >= 800);
     }
   };
@@ -46,29 +45,30 @@ export default function Home() {
     };
   }, []);
 
-
   return (
     <Applayout titleTag="Home">
       <HomePageWrapper ref={ref}>
         <StickyHeader sticky={isMobile ? true : isSticky} />
-        <HomePageHero />
-        <ArrowDown>
-          <ScrollIntoView selector={`#how-we-deliver`}>
-            <Image
-              src={arrowDown}
-              alt="arrow-down"
-              width={45}
-              className="scroll-arrow"
-              onClick={() => console.log("clicked")}
-            />
-          </ScrollIntoView>
-        </ArrowDown>
-        <HowWeDeliver />
-        <WhatWeDeliver />
-        <Projects />
-        <Crafts />
-        <Testimonials />
-        <Footer />
+        <HomePageHero isMobile={isMobile} />
+        {!isMobile && (
+          <ArrowDown>
+            <ScrollIntoView selector={`#how-we-deliver`}>
+              <Image
+                src={arrowDown}
+                alt="arrow-down"
+                width={45}
+                className="scroll-arrow"
+                onClick={() => console.log("clicked")}
+              />
+            </ScrollIntoView>
+          </ArrowDown>
+        )}
+        <HowWeDeliver isMobile={isMobile} />
+        <WhatWeDeliver isMobile={isMobile} />
+        <Projects isMobile={isMobile}/>
+        <Crafts isMobile={isMobile}/>
+        <Testimonials isMobile={isMobile}/>
+        <Footer isMobile={isMobile}/>
       </HomePageWrapper>
     </Applayout>
   );

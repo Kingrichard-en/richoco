@@ -4,31 +4,58 @@ import Image from "next/image";
 import React from "react";
 import elephant from "../../../../public/images/craft-elephant.png";
 
-interface indexProps {}
+interface indexProps {
+  isMobile: boolean;
+}
 
-export const Crafts: React.FC<indexProps> = ({}) => {
+export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
   return (
-    <CraftWrapper>
+    <CraftWrapper
+      style={{
+        flexDirection: isMobile ? "column" : "row",
+      }}
+    >
       <SectionImage>
         <Image src={elephant} alt="We craft growth-driven experience" />
       </SectionImage>
-      <SectionContent>
+      <div
+        style={{
+          width: isMobile ? "90%" : "50%",
+        }}
+      >
         <SectionTitle>We craft growth-driven experience</SectionTitle>
         <SectionDescription>
           Follow us on Instagram to get tips to help you grow your products
           learn more about our design process
         </SectionDescription>
         <div style={{ display: "flex", gap: "2rem" }}>
-          <Button text="Go bespoke!" background="#0A0A0A" borderRadius="28px" />
+          <Button
+            text="Go bespoke!"
+            background="#0A0A0A"
+            borderRadius="28px"
+            fontSize={isMobile ? "1.6rem" : "2rem"}
+            width={isMobile ? "16rem" : "245px"}
+            height={isMobile ? "4.8rem" : "56px"}
+          />
           <Button
             text="Contact us"
             background="#FFFFFF"
             color="#0A0A0A"
             borderRadius="28px"
+            fontSize={isMobile ? "1.6rem" : "2rem"}
+            width={isMobile ? "16rem" : "245px"}
+            height={isMobile ? "4.8rem" : "56px"}
           />
         </div>
-        <SubTitleText>Avg response time: 10mins</SubTitleText>
-      </SectionContent>
+        <SubTitleText
+          style={{
+            fontSize: isMobile ? "1.4rem" : "1.6rem",
+            width: isMobile ? "90%" : "auto",
+          }}
+        >
+          Avg response time: 10mins
+        </SubTitleText>
+      </div>
     </CraftWrapper>
   );
 };
@@ -49,9 +76,9 @@ const SectionImage = styled("div")(() => ({
   },
 }));
 
-const SectionContent = styled("div")(() => ({
-  width: "50%",
-}));
+// const SectionContent = styled("div")(() => ({
+  
+// }));
 const SectionTitle = styled("div")(() => ({
   fontFamily: "'Avenir' sans-serif",
   fontWeight: 900,

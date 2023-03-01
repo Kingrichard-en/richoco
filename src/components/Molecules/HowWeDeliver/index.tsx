@@ -3,34 +3,78 @@ import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import elephant from "../../../../public/images/deliver-elephant.svg";
-interface indexProps {}
+interface indexProps {
+  isMobile: boolean;
+}
 
-export const HowWeDeliver: React.FC<indexProps> = ({}) => {
+export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
   return (
     <>
-      <ScrollTarget id="how-we-deliver"/>
-      <HowWeDeliverWrapper>
-        <SectionImage>
-          <Image src={elephant} alt="how we deliver" />
-        </SectionImage>
-        <SectionContent>
-          <SectionTitle>How we deliver</SectionTitle>
-          <SectionDescription>
+      <ScrollTarget id="how-we-deliver" />
+      <HowWeDeliverWrapper
+        style={{
+          flexDirection: isMobile ? "column" : "row",
+          width: isMobile ? "100%" : "70%",
+          marginTop: isMobile ? "4rem" : "0",
+        }}
+      >
+        <div>
+          <Image
+            src={elephant}
+            alt="how we deliver"
+            style={{
+              width: isMobile ? "100%" : "70%",
+            }}
+          />
+        </div>
+        <div
+          style={{
+            width: isMobile ? "90%" : "50%",
+          }}
+        >
+          <p
+            style={{
+              fontWeight: 900,
+              fontSize: isMobile ? "3.7rem" : "6.5rem",
+            }}
+          >
+            How we deliver
+          </p>
+          <p
+            style={{
+              margin: isMobile ? "2rem 0 4rem 0" : "4rem 0",
+              fontFamily: "'Avenir' sans-serif",
+              fontWeight: 400,
+              color: "#505050",
+              fontSize: isMobile ? "1.6rem" : "1.8rem",
+              lineHeight: "2.2rem",
+            }}
+          >
             We design and develop captivating Brand Identities and influential
             Digital Products for innovative companies around the world. Using
             the industry-proven Standards and Design Sprint, with our reliant
             remote team, we've developed a highly optimized design delivery
             process that brings results in just a few weeks. Sounds like what
             you’re looking for?
-          </SectionDescription>
+          </p>
           <Button
             text="Contact us"
             background="#FFFFFF"
             color="#0A0A0A"
             borderRadius="28px"
+            fontSize={isMobile ? "1.6rem" : "2rem"}
+            width={isMobile ? "16rem" : "245px"}
+            height={isMobile ? "4.8rem" : "56px"}
           />
-          <SubTitleText>Avg response time: 10mins</SubTitleText>
-        </SectionContent>
+          <SubTitleText
+            style={{
+              fontSize: isMobile ? "1.4rem" : "1.6rem",
+              width: isMobile ? "90%" : "auto",
+            }}
+          >
+            Avg response time: 10mins
+          </SubTitleText>
+        </div>
       </HowWeDeliverWrapper>
     </>
   );
@@ -40,33 +84,28 @@ const HowWeDeliverWrapper = styled("div")(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  width: "70%",
+  
   margin: "0 auto",
 }));
-const SectionImage = styled("div")(() => ({
-  "& img": {
-    width: "70%",
-  },
-}));
+// const SectionImage = styled("div")(() => ({
+//   "& img": {
+//    ,
+//   },
+// }));
 const ScrollTarget = styled("div")(() => ({
   marginBottom: "-4rem",
 }));
 
-const SectionContent = styled("div")(() => ({
-  width: "50%",
-}));
-const SectionTitle = styled("div")(() => ({
-  fontFamily: "'Avenir' sans-serif",
-  fontWeight: 700,
-  fontSize: "6.5rem",
-}));
-const SectionDescription = styled("div")(() => ({
-  margin: "4rem 0",
-  fontFamily: "'Avenir' sans-serif",
-  fontWeight: 400,
-  color: "#505050",
-  fontSize: "1.8rem",
-}));
+// const SectionContent = styled("div")(() => ({
+  
+// }));
+// const SectionTitle = styled("div")(() => ({
+//   // fontFamily: "'Avenir' sans-serif",
+//  ,
+// }));
+// const SectionDescription = styled("div")(() => ({
+  
+// }));
 const SubTitleText = styled("h4")(() => ({
   fontSize: "1.6rem",
   textAlign: "left",

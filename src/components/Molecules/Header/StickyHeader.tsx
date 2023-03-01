@@ -18,6 +18,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
     <StickyHeaderWrapper
       style={{
         padding: isMobile ? "1rem" : "1.5rem 6rem",
+        overflow: isMobile ? 'initial' : "hidden",
       }}
     >
       <Image src={richocoSmBlack} alt="logo" />
@@ -38,7 +39,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
 
 const StickyHeaderWrapper = styled("div")(({}) => ({
   width: "100%",
-  overflow: "hidden",
+  
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
