@@ -12,6 +12,7 @@ import arrowDown from "../../public/images/arrowDown.svg";
 import ScrollIntoView from "react-scroll-into-view";
 import StickyHeader from "@/components/Molecules/Header/StickyHeader";
 import { LegacyRef, useEffect, useRef, useState } from "react";
+import { useScreenResolution } from "@/hooks/useScreenResolution";
 
 const HomePageWrapper = styled("div")(() => ({
   // display: "flex",
@@ -28,7 +29,7 @@ const ArrowDown = styled("div")(() => ({
 export default function Home() {
   const [isSticky, setSticky] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-
+  const { isMobile } = useScreenResolution();
   const handleScroll = () => {
     if (ref.current) {
       const top = Math.abs(ref.current.getBoundingClientRect().top);
@@ -49,7 +50,7 @@ export default function Home() {
   return (
     <Applayout titleTag="Home">
       <HomePageWrapper ref={ref}>
-        <StickyHeader sticky={isSticky} />
+        <StickyHeader sticky={isMobile ? true : isSticky} />
         <HomePageHero />
         <ArrowDown>
           <ScrollIntoView selector={`#how-we-deliver`}>
