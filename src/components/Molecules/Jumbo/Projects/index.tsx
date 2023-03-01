@@ -26,7 +26,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       url: "https://usecheckin.com",
     },
     {
-      name: "Stovoo",
+      name: "StoVoo",
       description:
         "A food delivery revolution in an app. Binge, order and learn from seasoned vendors!",
       image: stovooCS,
