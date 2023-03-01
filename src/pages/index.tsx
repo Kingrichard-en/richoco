@@ -9,6 +9,9 @@ import Applayout from "@/layout/AppLayout";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import arrowDown from "../../public/images/arrowDown.svg";
+import ScrollIntoView from "react-scroll-into-view";
+import StickyHeader from "@/components/Molecules/Header/StickyHeader";
+import { LegacyRef, useEffect, useRef, useState } from "react";
 
 const HomePageWrapper = styled("div")(() => ({
   // display: "flex",
@@ -18,23 +21,46 @@ const HomePageWrapper = styled("div")(() => ({
 const ArrowDown = styled("div")(() => ({
   textAlign: "center",
   width: "100%",
-  marginTop: "4rem",
+  margin: "4rem 0 10rem 0",
   cursor: "pointer",
 }));
 
 export default function Home() {
+  const [isSticky, setSticky] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (ref.current) {
+      const top = Math.abs(ref.current.getBoundingClientRect().top);
+      setSticky(top >= 800);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll);
+    };
+  }, []);
+
+  // console.log(isSticky);
+
   return (
     <Applayout titleTag="Home">
-      <HomePageWrapper>
+      <HomePageWrapper ref={ref}>
+        <StickyHeader sticky={isSticky} />
         <HomePageHero />
         <ArrowDown>
-          <Image
-            src={arrowDown}
-            alt="arrow-down"
-            width={45}
-            className="scroll-arrow"
-            onClick={() => console.log("clicked")}
-          />
+          <ScrollIntoView selector={`#how-we-deliver`}>
+            <Image
+              src={arrowDown}
+              alt="arrow-down"
+              width={45}
+              className="scroll-arrow"
+              onClick={() => console.log("clicked")}
+            />
+          </ScrollIntoView>
         </ArrowDown>
         <HowWeDeliver />
         <WhatWeDeliver />

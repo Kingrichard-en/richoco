@@ -212,7 +212,7 @@ const arrowStyles = {
   display: "flex!important",
   alignItems: "center",
   justifyContent: "center",
-  zIndex: 100,
+  zIndex: 10,
   // height: '100%',
   "&>img": {
     width: "10px",

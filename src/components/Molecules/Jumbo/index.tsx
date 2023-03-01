@@ -1,16 +1,15 @@
-import React from "react";
 import { styled } from "@mui/material";
 import Image from "next/image";
+import React from "react";
+import heroIllustration from "../../../../public/images/hero-illustration.svg";
 import heroJumbo from "../../../../public/images/hero-jumbo-text.svg";
 import richocoSmBlack from "../../../../public/images/logo-sm-black.svg";
-import heroIllustration from "../../../../public/images/hero-illustration.svg";
 import Button from "../../Button";
-import Flex from "../../Flex";
 interface indexProps {}
 
 export const HomePageHero: React.FC<indexProps> = ({}) => {
   return (
-    <Flex>
+    <HomeWrapper>
       <HeroTextWrapper>
         <LogoWrapper>
           <Image alt="Richoco" src={richocoSmBlack} />
@@ -38,9 +37,14 @@ export const HomePageHero: React.FC<indexProps> = ({}) => {
           <Image alt="illustration" src={heroIllustration} />
         </HeroIllustration>
       </HeroIllustrationWrapper>
-    </Flex>
+    </HomeWrapper>
   );
 };
+
+const HomeWrapper = styled("div")(() => ({
+  display: "flex",
+  // marginBottom: "18rem",
+}));
 
 const HeroTextWrapper = styled("div")(() => ({
   width: "50%",

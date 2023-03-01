@@ -7,29 +7,32 @@ interface indexProps {}
 
 export const HowWeDeliver: React.FC<indexProps> = ({}) => {
   return (
-    <HowWeDeliverWrapper>
-      <SectionImage>
-        <Image src={elephant} alt="how we deliver" />
-      </SectionImage>
-      <SectionContent>
-        <SectionTitle>How we deliver</SectionTitle>
-        <SectionDescription>
-          We design and develop captivating Brand Identities and influential
-          Digital Products for innovative companies around the world. Using the
-          industry-proven Standards and Design Sprint, with our reliant remote
-          team, we've developed a highly optimized design delivery process that
-          brings results in just a few weeks. Sounds like what you’re looking
-          for?
-        </SectionDescription>
-        <Button
-          text="Contact us"
-          background="#FFFFFF"
-          color="#0A0A0A"
-          borderRadius="28px"
-        />
-        <SubTitleText>Avg response time: 10mins</SubTitleText>
-      </SectionContent>
-    </HowWeDeliverWrapper>
+    <>
+      <ScrollTarget id="how-we-deliver"/>
+      <HowWeDeliverWrapper>
+        <SectionImage>
+          <Image src={elephant} alt="how we deliver" />
+        </SectionImage>
+        <SectionContent>
+          <SectionTitle>How we deliver</SectionTitle>
+          <SectionDescription>
+            We design and develop captivating Brand Identities and influential
+            Digital Products for innovative companies around the world. Using
+            the industry-proven Standards and Design Sprint, with our reliant
+            remote team, we've developed a highly optimized design delivery
+            process that brings results in just a few weeks. Sounds like what
+            you’re looking for?
+          </SectionDescription>
+          <Button
+            text="Contact us"
+            background="#FFFFFF"
+            color="#0A0A0A"
+            borderRadius="28px"
+          />
+          <SubTitleText>Avg response time: 10mins</SubTitleText>
+        </SectionContent>
+      </HowWeDeliverWrapper>
+    </>
   );
 };
 
@@ -39,12 +42,14 @@ const HowWeDeliverWrapper = styled("div")(() => ({
   alignItems: "center",
   width: "70%",
   margin: "0 auto",
-  marginTop: '4rem'
 }));
 const SectionImage = styled("div")(() => ({
   "& img": {
     width: "70%",
   },
+}));
+const ScrollTarget = styled("div")(() => ({
+  marginBottom: "-4rem",
 }));
 
 const SectionContent = styled("div")(() => ({

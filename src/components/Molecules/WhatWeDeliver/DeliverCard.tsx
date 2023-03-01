@@ -1,21 +1,22 @@
 import { styled } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
-import checkMark from "../../../../public/images/check.png";
 interface DeliverCardProps {
   title: string;
   description: string;
   features: string[];
   bg?: string;
+  check: StaticImageData;
 }
 
 export const DeliverCard: React.FC<DeliverCardProps> = ({
   title,
   description,
   features,
+  check,
   bg = "#FFFFFF",
 }) => {
-    const textColor = bg === "#0A0A0A" ? "#F6F6F6" : "#505050";
+  const textColor = bg === "#0A0A0A" ? "#F6F6F6" : "#505050";
   return (
     <DeliverCardWrapper
       style={{
@@ -31,7 +32,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
       <ul>
         {features.map((feature, index) => (
           <li key={index}>
-            <Image src={checkMark} alt="check-mark" width={20} />
+            <Image src={check} alt="check-mark" width={20} />
             <span>{feature}</span>
           </li>
         ))}
@@ -40,37 +41,36 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
   );
 };
 
-const DeliverCardWrapper = styled("div")(({  }) => ({
-    width: "30%",
+const DeliverCardWrapper = styled("div")(({}) => ({
+  width: "30%",
   "& p": {
     fontSize: "1.6rem",
     fontWeight: 400,
     marginTop: "2rem",
   },
-    "& ul": {
-        listStyle: "none",
-        padding: '1rem 0',
+  "& ul": {
+    listStyle: "none",
+    padding: "1rem 0",
 
-        "& li": {
-            display: "flex",
-            alignItems: "center",
-            gap: "1rem",
-            marginTop: "1rem",
-            cursor: "pointer",
-            padding: ".5rem 0",
-            "& span": {
-                fontSize: "1.6rem",
-                fontWeight: 400,
-            },
-
-        }
-    }
+    "& li": {
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      marginTop: "1rem",
+      cursor: "pointer",
+      padding: ".5rem 0",
+      "& span": {
+        fontSize: "1.6rem",
+        fontWeight: 400,
+      },
+    },
+  },
 }));
 const CardTitle = styled("h1")(() => ({
   fontFamily: "'Avenir', sans-serif",
   fontSize: "4.8rem",
   fontWeight: 700,
-//   color: "#0A0A0A",
+  //   color: "#0A0A0A",
 }));
 
 export default DeliverCard;

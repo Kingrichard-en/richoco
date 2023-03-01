@@ -2,6 +2,9 @@ import Flex from "@/components/Flex";
 import { styled } from "@mui/material";
 import React from "react";
 import DeliverCard from "./DeliverCard";
+import checkMark from "../../../../public/images/check.png";
+import checkWhite from "../../../../public/images/checkwhite.svg";
+
 interface indexProps {}
 
 export const WhatWeDeliver: React.FC<indexProps> = ({}) => {
@@ -75,6 +78,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({}) => {
             features={item.features}
             bg={index === 2 ? "#0A0A0A" : "#fff"}
             key={index}
+            check={index ===2 ? checkWhite : checkMark}
           />
         ))}
       </div>
