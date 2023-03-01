@@ -30,21 +30,21 @@ export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
+    console.log('top: ', ref)
     if (ref.current) {
       const top = Math.abs(ref.current.getBoundingClientRect().top);
+      console.log(isSticky);  
       setSticky(top >= 800);
     }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", () => handleScroll);
     };
   }, []);
 
-  // console.log(isSticky);
 
   return (
     <Applayout titleTag="Home">
