@@ -5,7 +5,7 @@ import { useScreenResolution } from "@/hooks/useScreenResolution";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import richocoSmBlack from "../../..//assets/images/logo-sm-black.svg";
+import richocoSmBlack from "../../../assets/images/logo-sm-black.svg";
 
 interface StickyHeaderProps {
   sticky: boolean;

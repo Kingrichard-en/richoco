@@ -1,13 +1,13 @@
 import { styled } from "@mui/material";
 import React from "react";
 
-import checkinCS from "../../../..//assets/case-studies/checkin-web.png";
-import stovooCS from "../../../..//assets/case-studies/stovoo-web.png";
-import ethaCS from "../../../..//assets/case-studies/etha-web.png";
-import mamiCS from "../../../..//assets/case-studies/mami-web.png";
-import majestyCS from "../../../..//assets/case-studies/majesty-web.png";
-import remitCS from "../../../..//assets/case-studies/remit-web.png";
-import vorroCS from "../../../..//assets/case-studies/vorro-web.png";
+import checkinCS from "../../../../assets/case-studies/checkin-web.png";
+import stovooCS from "../../../../assets/case-studies/stovoo-web.png";
+import ethaCS from "../../../../assets/case-studies/etha-web.png";
+import mamiCS from "../../../../assets/case-studies/mami-web.png";
+import majestyCS from "../../../../assets/case-studies/majesty-web.png";
+import remitCS from "../../../../assets/case-studies/remit-web.png";
+import vorroCS from "../../../../assets/case-studies/vorro-web.png";
 import Image from "next/image";
 import Button from "@/components/Button";
 

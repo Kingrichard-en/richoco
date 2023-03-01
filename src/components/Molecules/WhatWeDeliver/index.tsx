@@ -2,8 +2,8 @@ import Flex from "@/components/Flex";
 import { styled } from "@mui/material";
 import React from "react";
 import DeliverCard from "./DeliverCard";
-import checkMark from "../../..//assets/images/check.png";
-import checkWhite from "../../..//assets/images/checkwhite.svg";
+import checkMark from "../../../assets/images/check.png";
+import checkWhite from "../../../assets/images/checkwhite.svg";
 
 interface indexProps {
   isMobile: boolean;

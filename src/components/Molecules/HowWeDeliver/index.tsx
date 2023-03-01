@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import elephant from "../../..//assets/images/deliver-elephant.svg";
+import elephant from "../../../assets/images/deliver-elephant.svg";
 interface indexProps {
   isMobile: boolean;
 }

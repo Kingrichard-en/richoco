@@ -1,12 +1,12 @@
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import logoLgWhite from "../../..//assets/images/logo-lg-White.svg";
-import phone from "../../..//assets/images/phone.svg";
-import ig from "../../..//assets/images/ig.svg";
+import logoLgWhite from "../../../assets/images/logo-lg-White.svg";
+import phone from "../../../assets/images/phone.svg";
+import ig from "../../../assets/images/ig.svg";
 import linkedin from "../../../assets/images/linkedin.svg";
-import instalogo from "../../..//assets/images/instalogo.png";
-import tree from "../../..//assets/images/tree.svg";
+import instalogo from "../../../assets/images/instalogo.png";
+import tree from "../../../assets/images/tree.svg";
 import Button from "@/components/Button";
 import Flex from "@/components/Flex";
 
@@ -47,7 +47,9 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
           />
         </TipsContent>
       </Tips>
-      <MainFooter style={{ padding: isMobile ? "7rem 4rem" : "20rem 20rem 2rem" }}>
+      <MainFooter
+        style={{ padding: isMobile ? "7rem 4rem" : "20rem 20rem 2rem" }}
+      >
         <Image
           src={logoLgWhite}
           alt="logo"
