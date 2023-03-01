@@ -2,9 +2,9 @@ import Flex from "@/components/Flex";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import heroIllustration from "../../../../public/images/hero-illustration.svg";
-import heroJumbo from "../../../../public/images/hero-jumbo-text.svg";
-import richocoSmBlack from "../../../../public/images/logo-sm-black.svg";
+import heroIllustration from "../../..//assets/images/hero-illustration.svg";
+import heroJumbo from "../../..//assets/images/hero-jumbo-text.svg";
+import richocoSmBlack from "../../..//assets/images/logo-sm-black.svg";
 import Button from "../../Button";
 
 interface indexProps {
@@ -93,7 +93,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           <Image
             alt="illustration"
             src={heroIllustration}
-            style={{ width: isMobile ? '353px' : "100%", height: "447px" }}
+            style={{ width: isMobile ? "353px" : "100%", height: "447px" }}
           />
         </HeroIllustration>
       </HeroIllustrationWrapper>

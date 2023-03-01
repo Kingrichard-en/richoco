@@ -5,7 +5,7 @@ import { useScreenResolution } from "@/hooks/useScreenResolution";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import richocoSmBlack from "../../../../public/images/logo-sm-black.svg";
+import richocoSmBlack from "../../..//assets/images/logo-sm-black.svg";
 
 interface StickyHeaderProps {
   sticky: boolean;
@@ -18,7 +18,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
     <StickyHeaderWrapper
       style={{
         padding: isMobile ? "1rem" : "1.5rem 6rem",
-        overflow: isMobile ? 'initial' : "hidden",
+        overflow: isMobile ? "initial" : "hidden",
       }}
     >
       <Image src={richocoSmBlack} alt="logo" />
@@ -39,7 +39,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
 
 const StickyHeaderWrapper = styled("div")(({}) => ({
   width: "100%",
-  
+
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",

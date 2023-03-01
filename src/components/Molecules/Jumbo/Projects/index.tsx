@@ -1,13 +1,13 @@
 import { styled } from "@mui/material";
 import React from "react";
 
-import checkinCS from "../../../../../public/case-studies/checkin-web.png";
-import stovooCS from "../../../../../public/case-studies/stovoo-web.png";
-import ethaCS from "../../../../../public/case-studies/etha-web.png";
-import mamiCS from "../../../../../public/case-studies/mami-web.png";
-import majestyCS from "../../../../../public/case-studies/majesty-web.png";
-import remitCS from "../../../../../public/case-studies/remit-web.png";
-import vorroCS from "../../../../../public/case-studies/vorro-web.png";
+import checkinCS from "../../../..//assets/case-studies/checkin-web.png";
+import stovooCS from "../../../..//assets/case-studies/stovoo-web.png";
+import ethaCS from "../../../..//assets/case-studies/etha-web.png";
+import mamiCS from "../../../..//assets/case-studies/mami-web.png";
+import majestyCS from "../../../..//assets/case-studies/majesty-web.png";
+import remitCS from "../../../..//assets/case-studies/remit-web.png";
+import vorroCS from "../../../..//assets/case-studies/vorro-web.png";
 import Image from "next/image";
 import Button from "@/components/Button";
 
@@ -101,7 +101,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             key={index}
             style={{
               flexDirection: isMobile ? "column" : "row",
-              height: isMobile ? '70rem' : "60rem",
+              height: isMobile ? "70rem" : "60rem",
             }}
           >
             <section
@@ -134,7 +134,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
               alt={project.name}
               style={{
                 width: isMobile ? "100%" : "65%",
-                marginTop: isMobile ? "2rem" : 0
+                marginTop: isMobile ? "2rem" : 0,
               }}
             />
           </CaseStudy>

@@ -3,10 +3,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import avatar1 from "../../../../public/images/avatar1.png";
-import avatar2 from "../../../../public/images/avatar2.png";
-import arrowLeft from "../../../../public/images/arrowLeft.svg";
-import arrowRight from "../../../../public/images/arrowRight.svg";
+import avatar1 from "../../..//assets/images/avatar1.png";
+import avatar2 from "../../..//assets/images/avatar2.png";
+import arrowLeft from "../../..//assets/images/arrowLeft.svg";
+import arrowRight from "../../..//assets/images/arrowRight.svg";
 import Flex from "@/components/Flex";
 import Image from "next/image";
 import { MUIStyledCommonProps } from "@mui/system";
@@ -254,7 +254,7 @@ const arrowStyles = (isMobile: boolean) => {
   };
 };
 
-const SliderWrapper = styled('div', {
+const SliderWrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile",
 })<BoxProps & { isMobile: boolean }>(({ theme, isMobile }) => ({
   //   width: '90%!important',

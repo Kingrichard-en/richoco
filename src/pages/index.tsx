@@ -8,7 +8,7 @@ import WhatWeDeliver from "@/components/Molecules/WhatWeDeliver";
 import Applayout from "@/layout/AppLayout";
 import { styled } from "@mui/material";
 import Image from "next/image";
-import arrowDown from "../../public/images/arrowDown.svg";
+import arrowDown from "../assets/images/arrowDown.svg";
 import ScrollIntoView from "react-scroll-into-view";
 import StickyHeader from "@/components/Molecules/Header/StickyHeader";
 import { LegacyRef, useEffect, useRef, useState } from "react";

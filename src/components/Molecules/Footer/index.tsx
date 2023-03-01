@@ -1,12 +1,12 @@
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import logoLgWhite from "../../../../public/images/logo-lg-White.svg";
-import phone from "../../../../public/images/phone.svg";
-import ig from "../../../../public/images/ig.svg";
-import linkedin from "../../../../public/images/linkedin.svg";
-import instalogo from "../../../../public/images/instalogo.png";
-import tree from "../../../../public/images/tree.svg";
+import logoLgWhite from "../../..//assets/images/logo-lg-White.svg";
+import phone from "../../..//assets/images/phone.svg";
+import ig from "../../..//assets/images/ig.svg";
+import linkedin from "../../..//assets/images/linkedin.svg";
+import instalogo from "../../..//assets/images/instalogo.png";
+import tree from "../../..//assets/images/tree.svg";
 import Button from "@/components/Button";
 import Flex from "@/components/Flex";
 

@@ -2,8 +2,8 @@ import Flex from "@/components/Flex";
 import { styled } from "@mui/material";
 import React from "react";
 import DeliverCard from "./DeliverCard";
-import checkMark from "../../../../public/images/check.png";
-import checkWhite from "../../../../public/images/checkwhite.svg";
+import checkMark from "../../..//assets/images/check.png";
+import checkWhite from "../../..//assets/images/checkwhite.svg";
 
 interface indexProps {
   isMobile: boolean;
@@ -70,7 +70,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
           gap: "4rem",
           alignItems: "flex-start",
           margin: "0 auto",
-          width: isMobile ? '95%' : "70%",
+          width: isMobile ? "95%" : "70%",
           flexDirection: isMobile ? "column" : "row",
         }}
       >

@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import elephant from "../../../../public/images/deliver-elephant.svg";
+import elephant from "../../..//assets/images/deliver-elephant.svg";
 interface indexProps {
   isMobile: boolean;
 }
@@ -84,7 +84,7 @@ const HowWeDeliverWrapper = styled("div")(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  
+
   margin: "0 auto",
 }));
 // const SectionImage = styled("div")(() => ({
@@ -97,14 +97,14 @@ const ScrollTarget = styled("div")(() => ({
 }));
 
 // const SectionContent = styled("div")(() => ({
-  
+
 // }));
 // const SectionTitle = styled("div")(() => ({
 //   // fontFamily: "'Avenir' sans-serif",
 //  ,
 // }));
 // const SectionDescription = styled("div")(() => ({
-  
+
 // }));
 const SubTitleText = styled("h4")(() => ({
   fontSize: "1.6rem",
