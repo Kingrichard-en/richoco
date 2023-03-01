@@ -33,6 +33,7 @@ export default function Home() {
   const handleScroll = () => {
     if (ref.current) {
       const top = Math.abs(ref.current.getBoundingClientRect().top);
+      console.log('top ', top)
       setSticky(top >= 800);
     }
   };
