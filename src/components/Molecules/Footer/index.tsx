@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import logoLgWhite from "../../../assets/images/logo-lg-White.svg";
+import logoLgWhite from "../../../assets/images/logo-lg-white.svg";
 import phone from "../../../assets/images/phone.svg";
 import ig from "../../../assets/images/ig.svg";
 import linkedin from "../../../assets/images/linkedin.svg";
