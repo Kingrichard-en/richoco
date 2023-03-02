@@ -199,11 +199,13 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
               <Flex align="center" gap="1.2rem" direction="row">
                 <Image src={testimonial.avatar} alt="testimonial" width={80} />
                 <Flex direction="column" gap=".1rem">
-                  <h3>{testimonial.name}</h3>
+                  <h3 style={{ fontSize: isMobile ? '1.8rem' : "2rem" }}>{testimonial.name}</h3>
                   <h5>{testimonial.position}</h5>
                 </Flex>
               </Flex>
-              <p>{testimonial.description}</p>
+              <p style={{ fontSize: isMobile ? "1.2rem" : "1.8rem" }}>
+                {testimonial.description}
+              </p>
             </TestimonialCard>
           ))}
         </Slider>
@@ -291,7 +293,7 @@ const TestimonialCard = styled("div")(() => ({
   borderRadius: "8px",
   //   width: "40%!important",
   "& h3": {
-    fontSize: "2rem",
+   
     fontWeight: 700,
     color: "#4F4F4F",
   },
@@ -300,7 +302,7 @@ const TestimonialCard = styled("div")(() => ({
     marginTop: ".5rem",
   },
   "& p": {
-    fontSize: "1.8rem",
+    
     color: "#707070",
     fontWeight: 400,
   },

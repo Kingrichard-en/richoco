@@ -70,7 +70,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
           gap: "4rem",
           alignItems: "flex-start",
           margin: "0 auto",
-          width: isMobile ? "95%" : "70%",
+          width: isMobile ? "95%" : "75%",
           flexDirection: isMobile ? "column" : "row",
         }}
       >

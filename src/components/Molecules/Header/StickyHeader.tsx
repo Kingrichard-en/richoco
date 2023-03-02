@@ -19,6 +19,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
       style={{
         padding: isMobile ? "1rem" : "1.5rem 6rem",
         overflow: isMobile ? "initial" : "hidden",
+        height: isMobile ? "8rem" : "auto",
       }}
     >
       <Image src={richocoSmBlack} alt="logo" />

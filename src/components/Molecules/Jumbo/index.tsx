@@ -33,7 +33,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             style={{
               // width: isMobile ? "110%" : "80%",
               // height: isMobile ? "100%" : "80%",
-              margin: isMobile ? "-18rem 1rem -8rem 1rem" : "0",
+              margin: isMobile ? "-10rem 1rem -8rem 1rem" : "0",
             }}
           />
         </HeroText>
@@ -72,7 +72,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
         <SubTitleText
           style={{
             fontSize: isMobile ? "1.4rem" : "1.6rem",
-            width: isMobile ? "90%" : "auto",
+            width: isMobile ? "90%" : "100%",
           }}
         >
           Avg response time: 10mins
@@ -88,7 +88,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
         <HeroIllustration
           style={{
             borderRadius: isMobile ? 0 : "0px 0px 0px 100px",
-            padding: isMobile ? '2rem' : "5rem",
+            padding: isMobile ? '2rem' : "1rem",
             margin: "0 auto",
           }}
         >
@@ -125,7 +125,7 @@ const LogoWrapper = styled("div")(() => ({
   alignSelf: "flex-start",
 }));
 const HeroText = styled("div")(() => ({
-  marginTop: "9rem",
+  marginTop: "4rem",
   "& img": {
     width: "91%",
   },
@@ -142,7 +142,7 @@ const HeroSubText = styled("p")(() => ({
   // width: "85%",
   textAlign: "left",
   fontSize: "2rem",
-  marginTop: "-2rem",
+  marginTop: "-5rem",
   color: "#505050",
 }));
 const HeroCTA = styled("div")(() => ({
