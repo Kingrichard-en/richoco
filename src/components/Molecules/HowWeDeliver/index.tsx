@@ -5,9 +5,10 @@ import React from "react";
 import elephant from "../../../assets/images/deliver-elephant.svg";
 interface indexProps {
   isMobile: boolean;
+  className?: string
 }
 
-export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
+export const HowWeDeliver: React.FC<indexProps> = ({ isMobile, className }) => {
   return (
     <>
       <ScrollTarget id="how-we-deliver" />
@@ -18,6 +19,7 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
           width: isMobile ? "100%" : "75%",
           marginTop: isMobile ? "4rem" : "0",
         }}
+        className={className}
       >
         <div>
           <Image

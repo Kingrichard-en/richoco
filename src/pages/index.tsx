@@ -1,18 +1,19 @@
 import Crafts from "@/components/Molecules/Crafts";
 import Footer from "@/components/Molecules/Footer";
+import StickyHeader from "@/components/Molecules/Header/StickyHeader";
 import HowWeDeliver from "@/components/Molecules/HowWeDeliver";
 import HomePageHero from "@/components/Molecules/Jumbo";
 import Projects from "@/components/Molecules/Jumbo/Projects";
 import Testimonials from "@/components/Molecules/Testimonials";
 import WhatWeDeliver from "@/components/Molecules/WhatWeDeliver";
+import { useScreenResolution } from "@/hooks/useScreenResolution";
 import Applayout from "@/layout/AppLayout";
 import { styled } from "@mui/material";
 import Image from "next/image";
-import arrowDown from "../assets/images/arrowdown.svg";
+import { useEffect, useRef, useState } from "react";
 import ScrollIntoView from "react-scroll-into-view";
-import StickyHeader from "@/components/Molecules/Header/StickyHeader";
-import { LegacyRef, useEffect, useRef, useState } from "react";
-import { useScreenResolution } from "@/hooks/useScreenResolution";
+import arrowDown from "../assets/images/arrowdown.svg";
+import "animate.css";
 
 const HomePageWrapper = styled("div")(() => ({
   // display: "flex",
@@ -63,7 +64,10 @@ export default function Home() {
             </ScrollIntoView>
           </ArrowDown>
         )}
-        <HowWeDeliver isMobile={isMobile} />
+        <HowWeDeliver
+          isMobile={isMobile}
+          className="animate__animated animate__bounce"
+        />
         <WhatWeDeliver isMobile={isMobile} />
         <Projects isMobile={isMobile} />
         <Crafts isMobile={isMobile} />
