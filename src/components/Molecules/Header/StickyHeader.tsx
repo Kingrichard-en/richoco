@@ -20,6 +20,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
         overflow: isMobile ? "initial" : "hidden",
         height: isMobile ? "8rem" : "auto",
         padding: isMobile ? "1rem" : "1.5rem 0",
+        display: 'flex'
       }}
     >
       <div
