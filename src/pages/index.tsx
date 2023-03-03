@@ -22,7 +22,7 @@ const HomePageWrapper = styled("div")(() => ({
 const ArrowDown = styled("div")(() => ({
   textAlign: "center",
   width: "100%",
-  margin: "4rem 0 10rem 0",
+  margin: "7rem 0 10rem 0",
   cursor: "pointer",
 }));
 

@@ -171,54 +171,62 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
       style={{
         padding: isMobile ? "5rem 0 0 2rem" : "10rem 0 10rem 10rem",
         height: isMobile ? "85rem" : "auto",
+        paddingLeft: "10%",
       }}
     >
-      <h1
-        style={{
-          fontSize: isMobile ? "3.8rem" : "5rem",
-          fontWeight: 900,
-        }}
-      >
-        Job appreciations
-      </h1>
-      <p>
-        From various startups and brands across mobile, web, web3, Fintech
-        related projects.
-      </p>
-      <SliderWrapper
-        style={{
-          margin: isMobile ? "2rem 0" : "10rem 0",
+      {/* <div style={{}}> */}
+        <h1
+          style={{
+            fontSize: isMobile ? "3.8rem" : "4.8rem",
+            fontWeight: 900,
+          }}
+        >
+          Job appreciations
+        </h1>
+        <p>
+          From various startups and brands across mobile, web, web3, Fintech
+          related projects.
+        </p>
+        <SliderWrapper
+          style={{
+            margin: isMobile ? "2rem 0" : "10rem 0",
 
-          // '& .slick-slide': {}
-        }}
-        isMobile={isMobile}
-      >
-        <Slider {...settings}>
-          {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id}>
-              <Flex align="center" gap="1.2rem" direction="row">
-                <Image src={testimonial.avatar} alt="testimonial" width={80} />
-                <Flex direction="column" gap=".1rem">
-                  <h3 style={{ fontSize: isMobile ? '1.8rem' : "2rem" }}>{testimonial.name}</h3>
-                  <h5>{testimonial.position}</h5>
+            // '& .slick-slide': {}
+          }}
+          isMobile={isMobile}
+        >
+          <Slider {...settings}>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={testimonial.id}>
+                <Flex align="center" gap="1.2rem" direction="row">
+                  <Image
+                    src={testimonial.avatar}
+                    alt="testimonial"
+                    width={80}
+                  />
+                  <Flex direction="column" gap=".1rem">
+                    <h3 style={{ fontSize: isMobile ? "1.8rem" : "2rem" }}>
+                      {testimonial.name}
+                    </h3>
+                    <h5>{testimonial.position}</h5>
+                  </Flex>
                 </Flex>
-              </Flex>
-              <p style={{ fontSize: isMobile ? "1.2rem" : "1.8rem" }}>
-                {testimonial.description}
-              </p>
-            </TestimonialCard>
-          ))}
-        </Slider>
-      </SliderWrapper>
+                <p style={{ fontSize: isMobile ? "1.2rem" : "2rem" }}>
+                  {testimonial.description}
+                </p>
+              </TestimonialCard>
+            ))}
+          </Slider>
+        </SliderWrapper>
+      {/* </div> */}
     </TestimonialsWrapper>
   );
 };
 
 const TestimonialsWrapper = styled("div")(() => ({
   background: "#F6F6F6",
-
   "& p": {
-    fontSize: "1.5rem",
+    fontSize: "2rem",
     fontWeight: 400,
     color: "#4F4F4F",
     marginTop: "4rem",
@@ -302,7 +310,6 @@ const TestimonialCard = styled("div")(() => ({
     marginTop: ".5rem",
   },
   "& p": {
-    
     color: "#707070",
     fontWeight: 400,
   },

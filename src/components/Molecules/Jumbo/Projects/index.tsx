@@ -102,13 +102,13 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             key={index}
             style={{
               flexDirection: isMobile ? "column" : "row",
-              height: isMobile ? "70rem" : "60rem",
+              height: isMobile ? "70rem" : "55rem",
             }}
           >
             <section
               style={{
                 width: isMobile ? "100%" : "35%",
-                marginTop: isMobile ? "5rem" : "10rem",
+                marginTop: isMobile ? "5rem" : "0",
                 padding: isMobile ? "0 2rem" : "0 9rem",
               }}
             >
@@ -161,7 +161,7 @@ const ProjectsHeader = styled("div")(() => ({
   },
   "& p": {
     color: "#fff",
-    fontSize: "1.6rem",
+    fontSize: "2rem",
     fontWeight: 300,
 
     letterSpacing: "0px",
@@ -188,7 +188,7 @@ const CaseStudy = styled("div")(() => ({
     },
     "& p": {
       color: "#0A0A0A",
-      fontSize: "1.6rem",
+      fontSize: "2rem",
       fontWeight: 300,
       //   maxWidth: "70%",
       paddingTop: "3rem",

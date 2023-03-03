@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
     fontSize: fontSize || "2rem",
     fontFamily: "'Avenir' sans-serif",
     borderRadius: borderRadius || "0px",
-    fontWeight: "400",
+    fontWeight: "600",
     border: border || "1px solid #0A0A0A",
     ...styles,
   };

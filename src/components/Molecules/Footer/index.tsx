@@ -58,13 +58,12 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             marginBottom: isMobile ? "5rem" : "10rem",
           }}
         />
-        <p style={{ marginBottom: "6rem" }}>
+        <p style={{ marginBottom: isMobile ? "6rem" : '0' }}>
           © 2022 Richoco Studio · Branding & Creative Design Agency · Chaina
           Avenue Jaba, kano Nigeria.
         </p>
 
         <Flex align={"center"} direction={isMobile ? "column" : "row"}>
-          {/* <div> */}
           <p
             style={{
               borderRight: isMobile ? "none" : "1px solid #fff",
@@ -76,7 +75,6 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             <Image src={phone} alt="logo" style={{ marginRight: "12px" }} />
             Nigeria +234 80 6077 1255
           </p>
-          {/* </div> */}
           <div style={{ margin: isMobile ? "30px" : "0 20px" }}>
             <Image
               src={linkedin}
@@ -119,7 +117,7 @@ const MainFooter = styled("div")(() => ({
 
   "& p": {
     color: "#fff",
-    fontSize: "1.5rem",
+    fontSize: "1.6rem",
     fontWeight: "400",
     padding: ".4rem 1rem",
     textAlign: "center",
@@ -153,7 +151,7 @@ const TipsContentTitle = styled("h1")(() => ({
   margin: "2rem 0",
 }));
 const TipsText = styled("h1")(() => ({
-  fontSize: "1.5rem",
+  fontSize: "2rem",
   fontWeight: 300,
   color: "#fff",
   margin: "4rem 0",

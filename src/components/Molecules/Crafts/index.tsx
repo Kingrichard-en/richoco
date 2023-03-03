@@ -49,7 +49,7 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
         </div>
         <SubTitleText
           style={{
-            fontSize: isMobile ? "1.4rem" : "1.6rem",
+            fontSize: "1.4rem",
             width: isMobile ? "90%" : "auto",
           }}
         >

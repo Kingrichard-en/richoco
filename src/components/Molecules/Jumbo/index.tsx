@@ -71,7 +71,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
         </HeroCTA>
         <SubTitleText
           style={{
-            fontSize: isMobile ? "1.4rem" : "1.6rem",
+            fontSize: "1.4rem",
             width: isMobile ? "90%" : "100%",
           }}
         >
@@ -88,17 +88,16 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
         <HeroIllustration
           style={{
             borderRadius: isMobile ? 0 : "0px 0px 0px 100px",
-            padding: isMobile ? '2rem' : "1rem",
-            margin: "0 auto",
           }}
         >
           <Image
             alt="illustration"
             src={isMobile ? heroIllustrationMb : heroIllustration}
             style={{
-              width: isMobile ? "363px" : "95%",
+              width: isMobile ? "363px" : "72%",
               height: isMobile ? "447px" : "auto",
-              padding: isMobile ? "1rem" : "5rem",
+              margin: "0 auto",
+              padding: isMobile ? "3rem" : "initial",
             }}
           />
         </HeroIllustration>
@@ -136,12 +135,17 @@ const HeroIllustrationWrapper = styled("div")(() => ({
 }));
 const HeroIllustration = styled("div")(() => ({
   background: "#C4DBEC",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: "0 auto",
+  height: "102%",
+  width: "100%",
 }));
 
 const HeroSubText = styled("p")(() => ({
-  // width: "85%",
+  lineHeight: "2.3rem",
   textAlign: "left",
-  fontSize: "2rem",
   marginTop: "-5rem",
   color: "#505050",
 }));

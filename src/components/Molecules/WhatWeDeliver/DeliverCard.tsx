@@ -47,7 +47,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
 const DeliverCardWrapper = styled("div")(({}) => ({
   
   "& p": {
-    fontSize: "1.6rem",
+    fontSize: "2rem",
     fontWeight: 400,
     marginTop: "2rem",
   },
@@ -63,7 +63,7 @@ const DeliverCardWrapper = styled("div")(({}) => ({
       cursor: "pointer",
       padding: ".5rem 0",
       "& span": {
-        fontSize: "1.6rem",
+        fontSize: "2rem",
         fontWeight: 400,
       },
     },

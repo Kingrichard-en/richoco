@@ -14,7 +14,8 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
       <HowWeDeliverWrapper
         style={{
           flexDirection: isMobile ? "column" : "row",
-          width: isMobile ? "100%" : "70%",
+          justifyContent: "space-between",
+          width: isMobile ? "100%" : "75%",
           marginTop: isMobile ? "4rem" : "0",
         }}
       >
@@ -23,7 +24,7 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             src={elephant}
             alt="how we deliver"
             style={{
-              width: isMobile ? "100%" : "70%",
+              width: isMobile ? "100%" : "90%",
             }}
           />
         </div>
@@ -35,7 +36,7 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
           <p
             style={{
               fontWeight: 900,
-              fontSize: isMobile ? "3.7rem" : "6.5rem",
+              fontSize: isMobile ? "3.7rem" : "4.8rem",
             }}
           >
             How we deliver
@@ -46,8 +47,8 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
               fontFamily: "'Avenir' sans-serif",
               fontWeight: 400,
               color: "#505050",
-              fontSize: isMobile ? "1.6rem" : "1.8rem",
-              lineHeight: "2.2rem",
+              fontSize: isMobile ? "1.6rem" : "2rem",
+              lineHeight: "2.6rem",
             }}
           >
             We design and develop captivating Brand Identities and influential
@@ -68,7 +69,7 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
           />
           <SubTitleText
             style={{
-              fontSize: isMobile ? "1.4rem" : "1.6rem",
+              fontSize: "1.4rem",
               width: isMobile ? "90%" : "auto",
             }}
           >
@@ -84,7 +85,6 @@ const HowWeDeliverWrapper = styled("div")(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-
   margin: "0 auto",
 }));
 // const SectionImage = styled("div")(() => ({

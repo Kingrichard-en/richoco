@@ -70,7 +70,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
           gap: "4rem",
           alignItems: "flex-start",
           margin: "0 auto",
-          width: isMobile ? "95%" : "75%",
+          width: isMobile ? "95%" : "80%",
           flexDirection: isMobile ? "column" : "row",
         }}
       >
@@ -92,7 +92,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
 
 const WhatWeDeliverWrapper = styled("div")(() => ({
   width: "100%",
-  marginTop: "4rem",
+  marginTop: "10rem",
   overflowX: "hidden",
 }));
 
