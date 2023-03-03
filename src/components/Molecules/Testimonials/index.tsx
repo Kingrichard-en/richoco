@@ -170,54 +170,50 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     <TestimonialsWrapper
       style={{
         padding: isMobile ? "5rem 0 0 2rem" : "10rem 0 10rem 10rem",
-        height: isMobile ? "85rem" : "auto",
+        height: isMobile ? "75rem" : "auto",
         paddingLeft: "10%",
       }}
     >
       {/* <div style={{}}> */}
-        <h1
-          style={{
-            fontSize: isMobile ? "3.8rem" : "4.8rem",
-            fontWeight: 900,
-          }}
-        >
-          Job appreciations
-        </h1>
-        <p>
-          From various startups and brands across mobile, web, web3, Fintech
-          related projects.
-        </p>
-        <SliderWrapper
-          style={{
-            margin: isMobile ? "2rem 0" : "10rem 0",
+      <h1
+        style={{
+          fontSize: isMobile ? "3.8rem" : "4.8rem",
+          fontWeight: 900,
+        }}
+      >
+        Job appreciations
+      </h1>
+      <p>
+        From various startups and brands across mobile, web, web3, Fintech
+        related projects.
+      </p>
+      <SliderWrapper
+        style={{
+          margin: isMobile ? "2rem 0" : "10rem 0",
 
-            // '& .slick-slide': {}
-          }}
-          isMobile={isMobile}
-        >
-          <Slider {...settings}>
-            {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id}>
-                <Flex align="center" gap="1.2rem" direction="row">
-                  <Image
-                    src={testimonial.avatar}
-                    alt="testimonial"
-                    width={80}
-                  />
-                  <Flex direction="column" gap=".1rem">
-                    <h3 style={{ fontSize: isMobile ? "1.8rem" : "2rem" }}>
-                      {testimonial.name}
-                    </h3>
-                    <h5>{testimonial.position}</h5>
-                  </Flex>
+          // '& .slick-slide': {}
+        }}
+        isMobile={isMobile}
+      >
+        <Slider {...settings}>
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} isMobile={isMobile}>
+              <Flex align="center" gap="1.2rem" direction="row">
+                <Image src={testimonial.avatar} alt="testimonial" width={60} />
+                <Flex direction="column" gap=".1rem">
+                  <h3 style={{ fontSize: isMobile ? "1.8rem" : "2rem" }}>
+                    {testimonial.name}
+                  </h3>
+                  <h5>{testimonial.position}</h5>
                 </Flex>
-                <p style={{ fontSize: isMobile ? "1.2rem" : "2rem" }}>
-                  {testimonial.description}
-                </p>
-              </TestimonialCard>
-            ))}
-          </Slider>
-        </SliderWrapper>
+              </Flex>
+              <p style={{ fontSize: isMobile ? "1.6rem" : "2rem" }}>
+                {testimonial.description}
+              </p>
+            </TestimonialCard>
+          ))}
+        </Slider>
+      </SliderWrapper>
       {/* </div> */}
     </TestimonialsWrapper>
   );
@@ -241,8 +237,8 @@ const arrowStyles = (isMobile: boolean) => {
     border: "1px solid #505050",
     borderRadius: "50%",
     // padding: "1rem",
-    height: "6rem",
-    width: "6rem",
+    height: isMobile ? "5rem" : "6rem",
+    width: isMobile ? "5rem" : "6rem",
     display: "flex!important",
     alignItems: "center",
     justifyContent: "center",
@@ -266,7 +262,7 @@ const arrowStyles = (isMobile: boolean) => {
 
 const SliderWrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile",
-})<BoxProps & { isMobile: boolean }>(({ theme, isMobile }) => ({
+})<BoxProps & { isMobile: boolean }>(({ isMobile }) => ({
   //   width: '90%!important',
   ".slick-track": {
     // width: "100%!important",
@@ -283,36 +279,41 @@ const SliderWrapper = styled("div", {
     marginRight: "2rem",
   },
   ".slick-prev": {
-    left: isMobile ? "30%!important" : "42% !important",
+    left: isMobile ? "28%!important" : "42% !important",
     ...arrowStyles(isMobile),
   },
   ".slick-next": {
-    right: isMobile ? "30%!important" : "48% !important",
+    right: isMobile ? "40%!important" : "48% !important",
     ...arrowStyles(isMobile),
   },
-
+  // ".slick-slide": {
+  //   width: isMobile ? "730px!important" : "100%",
+  // },
+  ".slick-slide.slick-active.slick-center.slick-current": {
+    width: isMobile ? "350px!important" : "100%",
+  },
   //   },
 })) as any;
 
-const TestimonialCard = styled("div")(() => ({
+const TestimonialCard = styled("div", {
+  shouldForwardProp: (prop) => prop !== "isMobile",
+})<BoxProps & { isMobile: boolean }>(({ isMobile }) => ({
   cursor: "move",
   background: "#fff",
   padding: "3rem",
   borderRadius: "8px",
   //   width: "40%!important",
   "& h3": {
-   
     fontWeight: 700,
     color: "#4F4F4F",
   },
   "& h5": {
-    fontSize: "1.3rem",
+    fontSize: "1.6rem",
     marginTop: ".5rem",
   },
   "& p": {
     color: "#707070",
     fontWeight: 400,
   },
-}));
-
+})) as React.FC<BoxProps & { isMobile: boolean }>;
 export default Testimonials;
