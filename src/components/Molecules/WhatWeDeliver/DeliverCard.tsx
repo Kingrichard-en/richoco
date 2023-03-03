@@ -18,7 +18,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
   isMobile,
   bg = "#FFFFFF",
 }) => {
-  const textColor = bg === "#0A0A0A" ? "#F6F6F6" : "#505050";
+  const textColor = bg === "#0A0A0A" ? "#F6F6F6" : "#0A0A0A";
   return (
     <DeliverCardWrapper
       style={{
@@ -29,7 +29,9 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
         width: isMobile ? '100%' : "30%",
       }}
     >
-      <CardTitle>{title}</CardTitle>
+      <CardTitle style={{
+        color: textColor
+      }}>{title}</CardTitle>
       <p>{description}</p>
 
       <ul>
@@ -47,7 +49,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
 const DeliverCardWrapper = styled("div")(({}) => ({
   
   "& p": {
-    fontSize: "2rem",
+    fontSize: "1.8rem",
     fontWeight: 400,
     marginTop: "2rem",
   },
@@ -73,7 +75,7 @@ const CardTitle = styled("h1")(() => ({
   fontFamily: "'Avenir', sans-serif",
   fontSize: "4.8rem",
   fontWeight: 700,
-  //   color: "#0A0A0A",
+    // color: "#0A0A0A",
 }));
 
 export default DeliverCard;

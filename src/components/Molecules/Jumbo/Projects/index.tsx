@@ -3,6 +3,12 @@ import React from "react";
 
 import checkinCS from "../../../../assets/case-studies/checkin-web.png";
 import checkinMb from "../../../../assets/case-studies/checkin-mobile.png";
+import stoovoMb from "../../../../assets/case-studies/stoovoMb.png";
+import ethaMb from "../../../../assets/case-studies/ethaMb.png";
+import mamiMb from "../../../../assets/case-studies/mamiMb.png";
+import majestyMb from "../../../../assets/case-studies/majestyMb.png";
+import remitMb from "../../../../assets/case-studies/remitMb.png";
+import vorroMb from "../../../../assets/case-studies/vorroMb.png";
 import stovooCS from "../../../../assets/case-studies/stovoo-web.png";
 import ethaCS from "../../../../assets/case-studies/etha-web.png";
 import mamiCS from "../../../../assets/case-studies/mami-web.png";
@@ -22,49 +28,49 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       name: "CheckIn",
       description:
         "See how affordable booking process have been optimized. Vacation now made easy!",
-      image: isMobile ? checkinMb :  checkinCS,
+      image: isMobile ? checkinMb : checkinCS,
       url: "https://usecheckin.com",
     },
     {
       name: "StoVoo",
       description:
         "A food delivery revolution in an app. Binge, order and learn from seasoned vendors!",
-      image: stovooCS,
+      image: isMobile ? stoovoMb : stovooCS,
       url: "https://stovoo.com",
     },
     {
       name: "Etha",
       description:
         "Introducing Etha – your new favorite interactive social news platform, which helps you hold politicians accountable.",
-      image: ethaCS,
+      image: isMobile ? ethaMb : ethaCS,
       url: null,
     },
     {
       name: "mamiMarkets",
       description:
         "One-stop grocery delivery e-commerce platform, connects you with unlimited vendors.",
-      image: mamiCS,
+      image: isMobile ? mamiMb :  mamiCS,
       url: null,
     },
     {
       name: "His Majesty",
       description:
         "The Royal Website for Ògíamẹ̀ Atúwàtse III - The Olú of Warri - Nigeria.",
-      image: majestyCS,
+      image: isMobile ? majestyMb : majestyCS,
       url: "https://his-majesty.com",
     },
     {
       name: "Remitafrika",
       description:
-        "The Royal Website for Ògíamẹ̀ Atúwàtse III - The Olú of Warri - Nigeria.",
-      image: remitCS,
+        "A seamless fintech App that allows you to convert fiat currencies to friends and more.",
+      image: isMobile ? remitMb:remitCS,
       url: "https://remitafrika.com",
     },
     {
       name: "Vorro",
       description:
         "An open, scalable any-to-any integration and workflow platform that enables secure communication",
-      image: vorroCS,
+      image: isMobile ? vorroMb : vorroCS,
       url: "https://vorro.com",
     },
   ];
@@ -116,7 +122,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
               <p>{project.description}</p>
               <Button
                 text={
-                  project?.url ? "View live project" : "Case study coming soon"
+                  project?.url ? "View live project" : "No case study yet"
                 }
                 background={project?.url ? "#0A0A0A" : "#C4DBEC"}
                 border={"none"}
@@ -125,9 +131,10 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
                 onSubmit={() =>
                   project?.url ? window.open(project.url, "_blank") : null
                 }
-                fontSize={isMobile ? "1.6rem" : "1.5rem"}
+                fontSize={isMobile ? "1.6rem" : "2rem"}
                 width={isMobile ? "21rem" : "245px"}
                 height={isMobile ? "4.8rem" : "56px"}
+                fontFamily="'Avenir', sans-serif"
               />
             </section>
             <Image
@@ -185,6 +192,7 @@ const CaseStudy = styled("div")(() => ({
       color: "#0A0A0A",
       fontSize: "4.8rem",
       fontWeight: 700,
+      lineHeight: "2.5rem",
     },
     "& p": {
       color: "#0A0A0A",

@@ -62,7 +62,7 @@ const StickyHeaderWrapper = styled("div")(({}) => ({
 
   // "& > div": {
   "&  p": {
-    fontSize: "1.8rem",
+    fontSize: "2rem",
     fontFamily: "'Avenir', roboto",
     fontWeight: "400",
     cursor: "pointer",
