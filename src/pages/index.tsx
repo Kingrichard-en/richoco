@@ -13,7 +13,6 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import ScrollIntoView from "react-scroll-into-view";
 import arrowDown from "../assets/images/arrowdown.svg";
-import "animate.css";
 
 const HomePageWrapper = styled("div")(() => ({
   // display: "flex",
@@ -32,7 +31,6 @@ export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
   const { isMobile } = useScreenResolution();
   const handleScroll = () => {
-    console.log("top: ", ref);
     if (ref.current) {
       const top = Math.abs(ref.current.getBoundingClientRect().top);
       setSticky(top >= 800);
@@ -58,16 +56,13 @@ export default function Home() {
                 src={arrowDown}
                 alt="arrow-down"
                 width={45}
-                className="scroll-arrow"
+                className="animate__animated animate__bounce animate__infinite animate__slower"
                 onClick={() => console.log("clicked")}
               />
             </ScrollIntoView>
           </ArrowDown>
         )}
-        <HowWeDeliver
-          isMobile={isMobile}
-          className="animate__animated animate__bounce"
-        />
+        <HowWeDeliver isMobile={isMobile}  />
         <WhatWeDeliver isMobile={isMobile} />
         <Projects isMobile={isMobile} />
         <Crafts isMobile={isMobile} />

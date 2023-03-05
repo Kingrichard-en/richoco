@@ -27,9 +27,10 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             src={tree}
             alt="design tips and case studies"
             width={isMobile ? "350" : "400"}
+            className="animate__animated animate__zoomInUp"
           />
         </div>
-        <TipsContent>
+        <TipsContent className="animate__animated animate__zoomIn">
           <Image
             src={instalogo}
             alt="design tips and case studies"
@@ -54,11 +55,12 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
           src={logoLgWhite}
           alt="logo"
           width={isMobile ? 350 : 600}
+          className="animate__animated animate__zoomIn"
           style={{
             marginBottom: isMobile ? "5rem" : "10rem",
           }}
         />
-        <p style={{ marginBottom: isMobile ? "6rem" : '0' }}>
+        <p style={{ marginBottom: isMobile ? "6rem" : "0" }}>
           © 2022 Richoco Studio · Branding & Creative Design Agency · Chaina
           Avenue Jaba, kano Nigeria.
         </p>

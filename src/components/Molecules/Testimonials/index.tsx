@@ -173,27 +173,31 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
         height: isMobile ? "75rem" : "auto",
         paddingLeft: "10%",
       }}
-    >
+      >
       {/* <div style={{}}> */}
       <h1
         style={{
           fontSize: isMobile ? "3.8rem" : "4.8rem",
           fontWeight: 900,
         }}
-      >
+        className='animate__animated animate__fadeInDown'
+        >
         Job appreciations
       </h1>
-      <p>
+      <p
+        className="animate__animated animate__fadeInLeft"
+      >
         From various startups and brands across mobile, web, web3, Fintech
         related projects.
       </p>
       <SliderWrapper
         style={{
           margin: isMobile ? "2rem 0" : "10rem 0",
-
+          
           // '& .slick-slide': {}
         }}
         isMobile={isMobile}
+        className='animate__animated animate__fadeInUp'
       >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (

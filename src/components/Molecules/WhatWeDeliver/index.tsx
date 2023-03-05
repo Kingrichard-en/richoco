@@ -62,7 +62,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
     },
   ];
   return (
-    <WhatWeDeliverWrapper>
+    <WhatWeDeliverWrapper className="animate__animated animate__fadeInUp">
       <div
         style={{
           display: "flex",

@@ -26,13 +26,11 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             <Image alt="Richoco" src={richocoSmBlack} />
           </LogoWrapper>
         )}
-        <HeroText>
+        <HeroText className="animate__animated animate__backInLeft">
           <Image
             alt="Brin in the idea"
             src={heroJumbo}
             style={{
-              // width: isMobile ? "110%" : "80%",
-              // height: isMobile ? "100%" : "80%",
               margin: isMobile ? "-10rem 1rem -8rem 1rem" : "0",
             }}
           />
@@ -42,6 +40,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             width: isMobile ? "90%" : "auto",
             fontSize: isMobile ? "1.6rem" : "2rem",
           }}
+          className="animate__animated animate__backInUp"
         >
           User experience is everything. It always has been. Dream big on your
           idea leave the brain work to us. we believe in product led growth!.
@@ -58,6 +57,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
+            className="animate__animated animate__backInLeft animate__delay-1s"
           />
           <Button
             text="Contact us"
@@ -67,6 +67,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
+            className="animate__animated animate__backInRight animate__delay-1s"
           />
         </HeroCTA>
         <SubTitleText
@@ -91,6 +92,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           }}
         >
           <Image
+            className="animate__animated animate__zoomIn"
             alt="illustration"
             src={isMobile ? heroIllustrationMb : heroIllustration}
             style={{

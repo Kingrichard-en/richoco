@@ -84,6 +84,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             width: isMobile ? "60%" : "100%",
             margin: "0 auto",
           }}
+          className="animate__animated animate__fadeInLeft"
         >
           Projects and case study
         </h1>
@@ -92,6 +93,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             maxWidth: isMobile ? "90%" : "50%",
             lineHeight: "2.3rem",
           }}
+          className="animate__animated animate__fadeInRight"
         >
           We design compelling Brand Identities and impactful Digital
           Experiences for innovative companies around the world. Using the
@@ -110,20 +112,19 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
               flexDirection: isMobile ? "column" : "row",
               height: isMobile ? "70rem" : "55rem",
             }}
-          >
+            >
             <section
               style={{
                 width: isMobile ? "100%" : "35%",
                 marginTop: isMobile ? "5rem" : "0",
                 padding: isMobile ? "0 2rem" : "0 9rem",
               }}
+              className="animate__animated animate__fadeInUp"
             >
               <h1>{project.name}</h1>
               <p>{project.description}</p>
               <Button
-                text={
-                  project?.url ? "View live project" : "No case study yet"
-                }
+                text={project?.url ? "View live project" : "No case study yet"}
                 background={project?.url ? "#0A0A0A" : "#C4DBEC"}
                 border={"none"}
                 color={project?.url ? "#fff" : "#0A0A0A"}
@@ -140,6 +141,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             <Image
               src={project.image}
               alt={project.name}
+              className="animate__animated animate__fadeInDown"
               style={{
                 width: isMobile ? "100%" : "65%",
                 marginTop: isMobile ? "2rem" : 0,

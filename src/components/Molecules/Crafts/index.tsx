@@ -14,6 +14,7 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
       style={{
         flexDirection: isMobile ? "column" : "row",
       }}
+      className="animate__animated animate__fadeInLeftBig"
     >
       <SectionImage>
         <Image src={elephant} alt="We craft growth-driven experience" />
@@ -82,7 +83,7 @@ const SectionImage = styled("div")(() => ({
 const SectionTitle = styled("div")(() => ({
   fontFamily: "'Avenir' sans-serif",
   fontWeight: 900,
-  fontSize: "4.5rem",
+  fontSize: "4.8rem",
 }));
 const SectionDescription = styled("div")(() => ({
   margin: "4rem 0",
