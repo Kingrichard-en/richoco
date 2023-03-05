@@ -58,6 +58,12 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
             className="animate__animated animate__backInLeft animate__delay-1s"
+            onSubmit={() =>
+              window.open(
+                "https://web.whatsapp.com/send?phone=2348060771255&text=",
+                "_blank"
+              )
+            }
           />
           <Button
             text="Contact us"

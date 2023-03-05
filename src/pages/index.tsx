@@ -45,7 +45,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Applayout titleTag="Home">
+    <Applayout titleTag="Digital Agency Based in United States & Nigeria | UI UX and Development - Richoco Studio ">
       <HomePageWrapper ref={ref}>
         <StickyHeader sticky={isMobile ? true : isSticky} />
         <HomePageHero isMobile={isMobile} />
@@ -62,7 +62,7 @@ export default function Home() {
             </ScrollIntoView>
           </ArrowDown>
         )}
-        <HowWeDeliver isMobile={isMobile}  />
+        <HowWeDeliver isMobile={isMobile} />
         <WhatWeDeliver isMobile={isMobile} />
         <Projects isMobile={isMobile} />
         <Crafts isMobile={isMobile} />

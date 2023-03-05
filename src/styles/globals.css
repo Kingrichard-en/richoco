@@ -1,15 +1,12 @@
-
 @font-face {
-  font-family: 'Avenir';
-  src: url('/fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
-    url('/fonts/AvenirNextLTPro-Regular.woff') format('woff');
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
+    url("/fonts/AvenirNextLTPro-Regular.woff") format("woff");
 }
 
 * {
   box-sizing: border-box;
 }
-
-
 
 html,
 body,
@@ -136,7 +133,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -147,13 +144,12 @@ table {
 
 html {
   font-size: 10px; /*  62.5% of 16px */
-  font-family: 'Avenir', sans-serif;
+  font-family: "Avenir", sans-serif;
 }
 
 .scroll-arrow {
   animation: grow 1000ms ease infinite alternate;
 }
-
 
 @keyframes flash {
   from {
@@ -175,13 +171,13 @@ html {
   }
 }
 
-
 ::selection {
-  background: #C4DBEC;
+  background: #c4dbec;
   color: #000;
   font-weight: 500;
 }
 :root {
-  --animate-duration: 1000ms!important;
-  /* --animate-delay: 0.9s; */
+  --animate-duration: 1s !important;
+  /* --animate-repeat: 2;
+  --animate-delay: 0.9s; */
 }

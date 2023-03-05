@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="icon" href="/rlogo.jpeg" />
+          <link rel="icon" href="../assets/images/Richoco.jpg" />
 
           <link
             rel="stylesheet"

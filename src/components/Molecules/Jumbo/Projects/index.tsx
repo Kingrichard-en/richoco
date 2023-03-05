@@ -43,7 +43,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       description:
         "Introducing Etha – your new favorite interactive social news platform, which helps you hold politicians accountable.",
       image: isMobile ? ethaMb : ethaCS,
-      url: null,
+      url: "https://etha.one",
     },
     {
       name: "mamiMarkets",

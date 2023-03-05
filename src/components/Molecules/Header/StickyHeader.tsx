@@ -20,12 +20,12 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
         overflow: isMobile ? "initial" : "hidden",
         height: isMobile ? "8rem" : "auto",
         padding: isMobile ? "1rem" : "1.5rem 0",
-        display: 'flex'
+        display: "flex",
       }}
     >
       <div
         style={{
-          width: isMobile ? '100%' : "80%",
+          width: isMobile ? "100%" : "80%",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -42,6 +42,12 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
             width={isMobile ? "100px" : "245px"}
             height={isMobile ? "40px" : "56px"}
             fontSize={isMobile ? "1.3rem" : "2rem"}
+            onSubmit={() =>
+              window.open(
+                "https://web.whatsapp.com/send?phone=2348060771255&text=",
+                "_blank"
+              )
+            }
           />
         </Flex>
       </div>

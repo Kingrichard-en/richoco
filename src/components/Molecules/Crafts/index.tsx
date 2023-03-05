@@ -37,6 +37,12 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
+            onSubmit={() =>
+              window.open(
+                "https://web.whatsapp.com/send?phone=2348060771255&text=",
+                "_blank"
+              )
+            }
           />
           <Button
             text="Contact us"
