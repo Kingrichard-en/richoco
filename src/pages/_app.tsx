@@ -7,7 +7,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "@/layout/createEmotionCache";
 import theme from "@/layout/theme";
-import "animate.css";
 import "aos/dist/aos.css";
 import Aos from "aos";
 
@@ -23,8 +22,8 @@ export default function MyApp(props: MyAppProps) {
   React.useEffect(() => {
     Aos.init({
       duration: 800, // Animation duration
-      once: true, // Whether animation should happen only once
-      mirror: false,
+      once: false, // Whether animation should happen only once
+      mirror: true,
     });
   }, []);
   return (

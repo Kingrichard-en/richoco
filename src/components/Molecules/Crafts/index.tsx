@@ -14,7 +14,7 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
       style={{
         flexDirection: isMobile ? "column" : "row",
       }}
-      className="animate__animated animate__fadeInLeftBig"
+      data-aos="fade-left"
     >
       <SectionImage>
         <Image src={elephant} alt="We craft growth-driven experience" />

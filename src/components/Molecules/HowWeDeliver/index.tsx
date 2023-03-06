@@ -26,6 +26,9 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             style={{
               width: isMobile ? "100%" : "90%",
             }}
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
             // className="animate__animated animate__wobble"
           />
         </div>

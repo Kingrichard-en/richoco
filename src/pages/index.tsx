@@ -14,11 +14,6 @@ import { useEffect, useRef, useState } from "react";
 import ScrollIntoView from "react-scroll-into-view";
 import arrowDown from "../assets/images/arrowdown.svg";
 
-const HomePageWrapper = styled("div")(() => ({
-  // display: "flex",
-  // userSelect: "none",
-}));
-
 const ArrowDown = styled("div")(() => ({
   textAlign: "center",
   width: "100%",
@@ -46,7 +41,7 @@ export default function Home() {
 
   return (
     <Applayout titleTag="Digital Agency Based in United States & Nigeria | UI UX and Development - Richoco Studio ">
-      <HomePageWrapper ref={ref}>
+      <div ref={ref}>
         <StickyHeader sticky={isMobile ? true : isSticky} />
         <HomePageHero isMobile={isMobile} />
         {!isMobile && (
@@ -64,16 +59,14 @@ export default function Home() {
         )}
         <HowWeDeliver
           isMobile={isMobile}
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
+          
         />
         <WhatWeDeliver isMobile={isMobile} />
         <Projects isMobile={isMobile} />
         <Crafts isMobile={isMobile} />
         <Testimonials isMobile={isMobile} />
         <Footer isMobile={isMobile} />
-      </HomePageWrapper>
+      </div>
     </Applayout>
   );
 }
