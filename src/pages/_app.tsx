@@ -8,6 +8,8 @@ import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "@/layout/createEmotionCache";
 import theme from "@/layout/theme";
 import "animate.css";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 // Aos.init();
 const clientSideEmotionCache = createEmotionCache();
@@ -18,7 +20,13 @@ interface MyAppProps extends AppProps {
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
+  React.useEffect(() => {
+    Aos.init({
+      duration: 800, // Animation duration
+      once: true, // Whether animation should happen only once
+      mirror: false,
+    });
+  }, []);
   return (
     <CacheProvider value={emotionCache}>
       <Head>

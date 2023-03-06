@@ -1,16 +1,18 @@
-import * as React from "react";
+import  * as React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import theme from "@/layout/theme";
 import createEmotionCache from "@/layout/createEmotionCache";
 
 export default class MyDocument extends Document {
+
+  
   render() {
     return (
       <Html lang="en">
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="icon" href="../assets/images/Richoco.jpg" />
+          <link rel="icon" href="/rlogo.jpeg" />
 
           <link
             rel="stylesheet"

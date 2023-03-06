@@ -26,21 +26,21 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             style={{
               width: isMobile ? "100%" : "90%",
             }}
-            className="animate__animated animate__wobble"
+            // className="animate__animated animate__wobble"
           />
         </div>
         <div
           style={{
             width: isMobile ? "90%" : "50%",
           }}
-          className="animate__animated animate__backInRight"
+          // className="animate__animated animate__backInRight"
         >
           <p
             style={{
               fontWeight: 900,
               fontSize: isMobile ? "3.7rem" : "4.8rem",
             }}
-            className="animate_animated animate__fadeInRightBig"
+            // className="animate_animated animate__fadeInRightBig"
           >
             How We Deliver
           </p>

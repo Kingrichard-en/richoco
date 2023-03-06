@@ -62,7 +62,12 @@ export default function Home() {
             </ScrollIntoView>
           </ArrowDown>
         )}
-        <HowWeDeliver isMobile={isMobile} />
+        <HowWeDeliver
+          isMobile={isMobile}
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        />
         <WhatWeDeliver isMobile={isMobile} />
         <Projects isMobile={isMobile} />
         <Crafts isMobile={isMobile} />
