@@ -27,10 +27,10 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             src={tree}
             alt="design tips and case studies"
             width={isMobile ? "350" : "400"}
-            className="animate__animated animate__zoomInUp"
+            data-aos="fade-right"
           />
         </div>
-        <TipsContent className="animate__animated animate__zoomIn">
+        <TipsContent data-aos='zoom-in'>
           <Image
             src={instalogo}
             alt="design tips and case studies"
@@ -55,7 +55,7 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
           src={logoLgWhite}
           alt="logo"
           width={isMobile ? 350 : 600}
-          className="animate__animated animate__zoomIn"
+          data-aos='zoom-in'
           style={{
             marginBottom: isMobile ? "5rem" : "10rem",
           }}

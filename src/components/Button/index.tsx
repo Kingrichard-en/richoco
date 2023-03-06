@@ -15,7 +15,7 @@ interface ButtonProps {
   textTransform?: Property.TextTransform | undefined;
   border?: string;
   fontFamily?: string;
-  className?: string;
+  aos?: object;
 }
 const Button: React.FC<ButtonProps> = ({
   text,
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   border,
   borderRadius,
   fontFamily,
-  className,
+  aos,
   ...styles
 }) => {
   const Btnstyles = {
@@ -47,12 +47,12 @@ const Button: React.FC<ButtonProps> = ({
   };
   return (
     <MuiButton
-    className={className}
+      {...aos}
       style={{ ...Btnstyles, whiteSpace: "nowrap" }}
       onClick={onSubmit}
     >
       {/* {addon && <img src={addon} alt="" style={{ paddingRight: "10px" }} />} */}
-      <span style={{ textTransform: textTransform }} >{text}</span>
+      <span style={{ textTransform: textTransform }}>{text}</span>
     </MuiButton>
   );
 };

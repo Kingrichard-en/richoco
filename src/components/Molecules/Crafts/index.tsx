@@ -13,8 +13,10 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
     <CraftWrapper
       style={{
         flexDirection: isMobile ? "column" : "row",
+        overflow:"hidden!important",
+        // width: '100vw!important',
       }}
-      data-aos="fade-left"
+      data-aos="fade-up"
     >
       <SectionImage>
         <Image src={elephant} alt="We craft growth-driven experience" />

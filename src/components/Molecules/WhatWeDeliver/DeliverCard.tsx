@@ -8,6 +8,7 @@ interface DeliverCardProps {
   bg?: string;
   check: StaticImageData;
   isMobile: boolean;
+  aos?: string;
 }
 
 export const DeliverCard: React.FC<DeliverCardProps> = ({
@@ -17,10 +18,12 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
   check,
   isMobile,
   bg = "#FFFFFF",
+  aos,
 }) => {
   const textColor = bg === "#0A0A0A" ? "#F6F6F6" : "#0A0A0A";
   return (
     <DeliverCardWrapper
+      data-aos={aos}
       style={{
         background: bg,
         padding: "3rem",

@@ -37,13 +37,13 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             width: isMobile ? "90%" : "50%",
           }}
           // className="animate__animated animate__backInRight"
+          data-aos='fade-left'
         >
           <p
             style={{
               fontWeight: 900,
               fontSize: isMobile ? "3.7rem" : "4.8rem",
             }}
-            // className="animate_animated animate__fadeInRightBig"
           >
             How We Deliver
           </p>

@@ -26,7 +26,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             <Image alt="Richoco" src={richocoSmBlack} />
           </LogoWrapper>
         )}
-        <HeroText className="animate__animated animate__backInLeft">
+        <HeroText data-aos="fade-down">
           <Image
             alt="Brin in the idea"
             src={heroJumbo}
@@ -40,7 +40,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             width: isMobile ? "90%" : "auto",
             fontSize: isMobile ? "1.6rem" : "2rem",
           }}
-          className="animate__animated animate__backInUp"
+          data-aos="fade-up"
         >
           User experience is everything. It always has been. Dream big on your
           idea leave the brain work to us. we believe in product led growth!.
@@ -57,7 +57,8 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
-            className="animate__animated animate__backInLeft animate__delay-1s"
+            aos={{ "data-aos": "fade-right", "data-aos-delay": 600 }}
+            data-aos-delay="500"
             onSubmit={() =>
               window.open(
                 "https://web.whatsapp.com/send?phone=2348060771255&text=",
@@ -73,7 +74,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
-            className="animate__animated animate__backInRight animate__delay-1s"
+            aos={{ "data-aos": "fade-left", "data-aos-delay": 600 }}
           />
         </HeroCTA>
         <SubTitleText
@@ -98,7 +99,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           }}
         >
           <Image
-            className="animate__animated animate__zoomIn"
+            data-aos='zoom-in-up'
             alt="illustration"
             src={isMobile ? heroIllustrationMb : heroIllustration}
             style={{

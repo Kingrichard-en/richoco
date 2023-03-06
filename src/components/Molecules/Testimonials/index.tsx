@@ -180,12 +180,10 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
           fontSize: isMobile ? "3.8rem" : "4.8rem",
           fontWeight: 900,
         }}
-        className='animate__animated animate__fadeInDown'
         >
         Job appreciations
       </h1>
       <p
-        className="animate__animated animate__fadeInLeft"
       >
         From various startups and brands across mobile, web, web3, Fintech
         related projects.
@@ -197,7 +195,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
           // '& .slick-slide': {}
         }}
         isMobile={isMobile}
-        className='animate__animated animate__fadeInUp'
+        data-aos='fade-up'
       >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (

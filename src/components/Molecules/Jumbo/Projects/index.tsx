@@ -49,7 +49,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       name: "mamiMarkets",
       description:
         "One-stop grocery delivery e-commerce platform, connects you with unlimited vendors.",
-      image: isMobile ? mamiMb :  mamiCS,
+      image: isMobile ? mamiMb : mamiCS,
       url: null,
     },
     {
@@ -57,14 +57,14 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       description:
         "The Royal Website for Ògíamẹ̀ Atúwàtse III - The Olú of Warri - Nigeria.",
       image: isMobile ? majestyMb : majestyCS,
-      url: "https://his-majesty.com",
+      url: "https://atuwatseiii.com/",
     },
     {
       name: "Remitafrika",
       description:
         "A seamless fintech App that allows you to convert fiat currencies to friends and more.",
-      image: isMobile ? remitMb:remitCS,
-      url: "https://remitafrika.com",
+      image: isMobile ? remitMb : remitCS,
+      url: "https://xd.adobe.com/view/9b1e67ed-841f-4600-82a3-44fb77d271cb-ce4d/",
     },
     {
       name: "Vorro",
@@ -84,7 +84,6 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             width: isMobile ? "60%" : "100%",
             margin: "0 auto",
           }}
-          className="animate__animated animate__fadeInLeft"
         >
           Projects and case study
         </h1>
@@ -93,7 +92,6 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             maxWidth: isMobile ? "90%" : "50%",
             lineHeight: "2.3rem",
           }}
-          className="animate__animated animate__fadeInRight"
         >
           We design compelling Brand Identities and impactful Digital
           Experiences for innovative companies around the world. Using the
@@ -119,7 +117,6 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
                 marginTop: isMobile ? "5rem" : "0",
                 padding: isMobile ? "0 2rem" : "0 9rem",
               }}
-              className="animate__animated animate__fadeInUp"
             >
               <h1>{project.name}</h1>
               <p>{project.description}</p>
@@ -141,7 +138,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             <Image
               src={project.image}
               alt={project.name}
-              className="animate__animated animate__fadeInDown"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               style={{
                 width: isMobile ? "100%" : "65%",
                 marginTop: isMobile ? "2rem" : 0,
@@ -194,7 +191,7 @@ const CaseStudy = styled("div")(() => ({
       color: "#0A0A0A",
       fontSize: "4.8rem",
       fontWeight: 700,
-      lineHeight: "2.5rem",
+      lineHeight: "4.5rem",
     },
     "& p": {
       color: "#0A0A0A",

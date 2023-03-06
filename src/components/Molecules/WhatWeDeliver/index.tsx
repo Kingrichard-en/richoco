@@ -62,7 +62,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
     },
   ];
   return (
-    <WhatWeDeliverWrapper className="animate__animated animate__fadeInUp">
+    <WhatWeDeliverWrapper >
       <div
         style={{
           display: "flex",
@@ -83,6 +83,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             key={index}
             isMobile={isMobile}
             check={index === 2 ? checkWhite : checkMark}
+            aos={index === 0 ? "fade-right" : index === 1 ? "fade-up" : "fade-left"}
           />
         ))}
       </div>
