@@ -1,14 +1,14 @@
-import "@/styles/globals.css";
-import * as React from "react";
-import Head from "next/head";
-import { AppProps } from "next/app";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "@/layout/createEmotionCache";
 import theme from "@/layout/theme";
-import "aos/dist/aos.css";
+import "@/styles/globals.css";
+import { CacheProvider, EmotionCache } from "@emotion/react";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 import Aos from "aos";
+import "aos/dist/aos.css";
+import { AppProps } from "next/app";
+import Head from "next/head";
+import * as React from "react";
 
 // Aos.init();
 const clientSideEmotionCache = createEmotionCache();
@@ -25,7 +25,12 @@ export default function MyApp(props: MyAppProps) {
       once: false, // Whether animation should happen only once
       mirror: true,
     });
+    if (typeof window !== "undefined") {
+      const loader = document.getElementById("globalLoader");
+      if (loader) loader.style.display = "none";
+    }
   }, []);
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
