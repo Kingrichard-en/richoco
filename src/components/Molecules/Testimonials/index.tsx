@@ -126,7 +126,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
       >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} isMobile={isMobile}>
+            <TestimonialCard key={testimonial.id} isMobile={isMobile} data-index={testimonial.id}>
               <Flex align="center" gap="1.2rem" direction="row">
                 <Image src={testimonial.avatar} alt="testimonial" width={60} />
                 <Flex direction="column" gap=".1rem">
@@ -216,11 +216,9 @@ const SliderWrapper = styled("div", {
     right: isMobile ? "40%!important" : "48% !important",
     ...arrowStyles(isMobile),
   },
-  // ".slick-slide": {
-  //   width: isMobile ? "730px!important" : "100%",
-  // },
   ".slick-slide.slick-active.slick-center.slick-current": {
     width: isMobile ? "350px!important" : "100%",
+    // marginLeft: isMobile ? "2rem!important" : "0",
   },
   //   },
 })) as any;
