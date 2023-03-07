@@ -77,7 +77,12 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
                 whiteSpace: "nowrap",
               }}
             >
-              <Image src={phone} alt="logo" style={{ marginRight: "12px" }} />
+              <Image
+                src={phone}
+                alt="logo"
+                width={15}
+                style={{ marginRight: "12px", marginBottom: "-4px"}}
+              />
               <a href="tel:+234 80 6077 1255">Nigeria +234 80 6077 1255</a>
             </p>
             <div

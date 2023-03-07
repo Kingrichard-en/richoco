@@ -17,14 +17,13 @@ interface indexProps {
 }
 
 export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
   const settings = {
-    dots: false,
-    autoplay: false,
-    autoplaySpeed: 4300,
     // slidesToShow: 1,
-    // slidesToScroll: .5,
+    slidesToScroll: 1,
+    slidesToRow: 1,
     initialSlide: 0,
-    // speed: 2000,
+    speed: 2000,
     slidesPerRow: isMobile ? 1 : 2,
     adaptiveHeight: true,
     accessibility: true,
@@ -47,6 +46,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     ),
 
     arrows: true,
+    beforeChange: (_: number, next: number) => setCurrentSlide(next),
     //    appendDots: (dots) => <ul>{dots}</ul>,
     //    ...(paging && {
     //      customPaging: (i) => (
@@ -92,33 +92,64 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
         "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
       avatar: amba,
     },
+    {
+      id: 2,
+      name: "Freeman Faithful",
+      position: "Co-Founder & CEO at StoVoo",
+      description:
+        "They take the time to listen and understand the project brief and then through workshops completely transform your idea into a visual identity. We hardly had to ask for any amends and completely fell in love with what they delivered from the get go. Their design process is faultless",
+      avatar: freeman,
+    },
+
+    {
+      id: 3,
+      name: "Aastik Saini",
+      position: "Asst. V P at LegalPay",
+      description:
+        "Their design delivery style is fantastic and it really helped us all get on the same page from day one. Richard Enuenweisu's technical and commercial knowledge and his obvious design talent delivered a strong brand identity and a seamless UI beyond our expectation.",
+      avatar: aastik,
+    },
+    {
+      id: 1,
+      name: "Ambarish Gupta",
+      position: "Founder & CEO at Basis Vectors",
+      description:
+        "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
+      avatar: amba,
+    },
   ];
 
   return (
     <TestimonialsWrapper
       style={{
-        padding: isMobile ? "5rem 0 0 2rem" : "10rem 0 10rem 10rem",
         height: isMobile ? "75rem" : "auto",
-        paddingLeft: "10%",
+        padding: isMobile ? "5rem 0 0 0" : "10rem 0 10rem 0",
       }}
     >
-      {/* <div style={{}}> */}
-      <h1
+      <div
         style={{
-          fontSize: isMobile ? "3.8rem" : "4.8rem",
-          fontWeight: 700,
+          paddingLeft: "10%",
         }}
       >
-        Job appreciations
-      </h1>
-      <p>
-        From various startups and brands across mobile, web, web3, Fintech
-        related projects.
-      </p>
+        <h1
+          style={{
+            fontSize: isMobile ? "3.8rem" : "4.8rem",
+            fontWeight: 700,
+          }}
+        >
+          Job appreciations
+        </h1>
+        <p>
+          From various startups and brands across mobile, web, web3, Fintech
+          related projects.
+        </p>
+      </div>
       <SliderWrapper
         style={{
           margin: isMobile ? "2rem 0" : "10rem 0",
 
+          paddingBottom: "10rem",
+          paddingLeft: currentSlide === 0 ? '10%' : "0",
           // '& .slick-slide': {}
         }}
         isMobile={isMobile}
@@ -126,7 +157,11 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
       >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} isMobile={isMobile} data-index={testimonial.id}>
+            <TestimonialCard
+              key={testimonial.id}
+              isMobile={isMobile}
+              data-index={testimonial.id}
+            >
               <Flex align="center" gap="1.2rem" direction="row">
                 <Image src={testimonial.avatar} alt="testimonial" width={60} />
                 <Flex direction="column" gap=".1rem">
@@ -204,7 +239,7 @@ const SliderWrapper = styled("div", {
     "& div": {
       display: "flex",
       gap: "2rem",
-      height: '100%'
+      height: "100%",
     },
     marginRight: "2rem",
   },

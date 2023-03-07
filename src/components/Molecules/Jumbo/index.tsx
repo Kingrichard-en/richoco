@@ -39,54 +39,55 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             }}
           />
         </HeroText>
-        <HeroSubText
-          style={{
-            width: isMobile ? "90%" : "auto",
-            fontSize: isMobile ? "1.6rem" : "2rem",
-          }}
-          data-aos="fade-up"
-        >
-          User experience is everything. It always has been. Dream big on your
-          idea leave the brain work to us. we believe in product led growth!.
-        </HeroSubText>
-        <HeroCTA
-          style={{
-            width: isMobile ? "90%" : "100%",
-          }}
-        >
-          <Button
-            text="Go bespoke!"
-            background="#0A0A0A"
-            borderRadius="28px"
-            fontSize={isMobile ? "1.6rem" : "2rem"}
-            width={isMobile ? "16rem" : "245px"}
-            height={isMobile ? "4.8rem" : "56px"}
-            aos={{ "data-aos": "fade-right" }}
-            data-aos-delay="500"
-            onSubmit={() =>
-              window.open(
-                "https://web.whatsapp.com/send?phone=2348060771255&text=",
-                "_blank"
-              )
-            }
-          />
-          <Button
-            text="Contact us"
-            background="#FFFFFF"
-            color="#0A0A0A"
-            borderRadius="28px"
-            fontSize={isMobile ? "1.6rem" : "2rem"}
-            width={isMobile ? "16rem" : "245px"}
-            height={isMobile ? "4.8rem" : "56px"}
-            aos={{ "data-aos": "fade-left" }}
-            onSubmit={() =>
-              window.open(
-                "https://us10.list-manage.com/contact-form?u=72b160a86172e5fd4e66a28c5&form_id=1980ff014ed6ea7ec3dffbe211a3f143",
-                "_blank"
-              )
-            }
-          />
-        </HeroCTA>
+        <div data-aos="fade-up">
+          <HeroSubText
+            style={{
+              width: isMobile ? "90%" : "auto",
+              fontSize: isMobile ? "1.6rem" : "2rem",
+            }}
+          >
+            User experience is everything. It always has been. Dream big on your
+            idea leave the brain work to us. we believe in product led growth!.
+          </HeroSubText>
+          <HeroCTA
+            style={{
+              width: isMobile ? "90%" : "100%",
+            }}
+          >
+            <Button
+              text="Go bespoke!"
+              background="#0A0A0A"
+              borderRadius="28px"
+              fontSize={isMobile ? "1.6rem" : "2rem"}
+              width={isMobile ? "16rem" : "245px"}
+              height={isMobile ? "4.8rem" : "56px"}
+              // aos={{ "data-aos": "fade-right" }}
+              // data-aos-delay="500"
+              onSubmit={() =>
+                window.open(
+                  "https://web.whatsapp.com/send?phone=2348060771255&text=",
+                  "_blank"
+                )
+              }
+            />
+            <Button
+              text="Contact us"
+              background="#FFFFFF"
+              color="#0A0A0A"
+              borderRadius="28px"
+              fontSize={isMobile ? "1.6rem" : "2rem"}
+              width={isMobile ? "16rem" : "245px"}
+              height={isMobile ? "4.8rem" : "56px"}
+              // aos={{ "data-aos": "fade-left" }}
+              onSubmit={() =>
+                window.open(
+                  "https://us10.list-manage.com/contact-form?u=72b160a86172e5fd4e66a28c5&form_id=1980ff014ed6ea7ec3dffbe211a3f143",
+                  "_blank"
+                )
+              }
+            />
+          </HeroCTA>
+        </div>
         <SubTitleText
           style={{
             fontSize: "1.4rem",
