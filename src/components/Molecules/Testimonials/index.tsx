@@ -19,7 +19,7 @@ interface indexProps {
 export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const settings = {
-    // slidesToShow: 1,
+    slidesToShow: 1,
     slidesToScroll: 1,
     slidesToRow: 1,
     initialSlide: 0,
@@ -46,7 +46,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     ),
 
     arrows: true,
-    beforeChange: (_: number, next: number) => setCurrentSlide(next),
+    // beforeChange: (_: number, next: number) => setCurrentSlide(next),
     //    appendDots: (dots) => <ul>{dots}</ul>,
     //    ...(paging && {
     //      customPaging: (i) => (
@@ -99,31 +99,31 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
         "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
       avatar: amba,
     },
-    {
-      id: 2,
-      name: "Freeman Faithful",
-      position: "Co-Founder & CEO at StoVoo",
-      description:
-        "They take the time to listen and understand the project brief and then through workshops completely transform your idea into a visual identity. We hardly had to ask for any amends and completely fell in love with what they delivered from the get go. Their design process is faultless",
-      avatar: freeman,
-    },
+    // {
+    //   id: 2,
+    //   name: "Freeman Faithful",
+    //   position: "Co-Founder & CEO at StoVoo",
+    //   description:
+    //     "They take the time to listen and understand the project brief and then through workshops completely transform your idea into a visual identity. We hardly had to ask for any amends and completely fell in love with what they delivered from the get go. Their design process is faultless",
+    //   avatar: freeman,
+    // },
 
-    {
-      id: 3,
-      name: "Aastik Saini",
-      position: "Asst. V P at LegalPay",
-      description:
-        "Their design delivery style is fantastic and it really helped us all get on the same page from day one. Richard Enuenweisu's technical and commercial knowledge and his obvious design talent delivered a strong brand identity and a seamless UI beyond our expectation.",
-      avatar: aastik,
-    },
-    {
-      id: 1,
-      name: "Ambarish Gupta",
-      position: "Founder & CEO at Basis Vectors",
-      description:
-        "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
-      avatar: amba,
-    },
+    // {
+    //   id: 3,
+    //   name: "Aastik Saini",
+    //   position: "Asst. V P at LegalPay",
+    //   description:
+    //     "Their design delivery style is fantastic and it really helped us all get on the same page from day one. Richard Enuenweisu's technical and commercial knowledge and his obvious design talent delivered a strong brand identity and a seamless UI beyond our expectation.",
+    //   avatar: aastik,
+    // },
+    // {
+    //   id: 1,
+    //   name: "Ambarish Gupta",
+    //   position: "Founder & CEO at Basis Vectors",
+    //   description:
+    //     "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
+    //   avatar: amba,
+    // },
   ];
 
   return (
