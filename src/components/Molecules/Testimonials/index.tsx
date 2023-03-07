@@ -2,7 +2,7 @@ import Flex from "@/components/Flex";
 import { BoxProps, styled, Theme } from "@mui/material";
 import { MUIStyledCommonProps } from "@mui/system";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -56,6 +56,13 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     //      ),
     //    }),
   };
+  // const sliderRef = useRef(null);
+
+  // useEffect(() => {
+  //   if (sliderRef.current) {
+  //     sliderRef.current.addEventListener('wheel', (e: any) => {
+  //   }
+  // })
 
   const testimonials = [
     {
@@ -149,7 +156,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
           margin: isMobile ? "2rem 0" : "10rem 0",
 
           paddingBottom: "10rem",
-          paddingLeft: currentSlide === 0 ? '10%' : "0",
+          paddingLeft: currentSlide === 0 ? "10%" : "0",
           // '& .slick-slide': {}
         }}
         isMobile={isMobile}
@@ -161,6 +168,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
               key={testimonial.id}
               isMobile={isMobile}
               data-index={testimonial.id}
+              onDrag={(e) => console.log('esdfsdf: ', e)}
             >
               <Flex align="center" gap="1.2rem" direction="row">
                 <Image src={testimonial.avatar} alt="testimonial" width={60} />

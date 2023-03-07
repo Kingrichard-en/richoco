@@ -94,7 +94,7 @@ export const WhatWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
 const WhatWeDeliverWrapper = styled("div")(() => ({
   width: "100%",
   marginTop: "10rem",
-  overflowX: "hidden",
+  // overflowX: "hidden",
 }));
 
 export default WhatWeDeliver;
