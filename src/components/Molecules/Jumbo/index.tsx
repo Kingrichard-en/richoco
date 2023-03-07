@@ -2,8 +2,8 @@ import Flex from "@/components/Flex";
 import { styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import heroIllustration from "../../../assets/images/hero-illustration.svg";
 import heroIllustrationMb from "../../../assets/images/hero-illustration-mb.svg";
+import heroIllustration from "../../../assets/images/hero-illustration.svg";
 import heroJumbo from "../../../assets/images/hero-jumbo-text.svg";
 import richocoSmBlack from "../../../assets/images/logo-sm-black.svg";
 import Button from "../../Button";
@@ -23,7 +23,11 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
       >
         {!isMobile && (
           <LogoWrapper>
-            <Image alt="Richoco" src={richocoSmBlack} />
+            <Image
+              alt="Richoco"
+              src={richocoSmBlack}
+              style={{cursor:'pointer'}}
+            />
           </LogoWrapper>
         )}
         <HeroText data-aos="fade-down">
@@ -99,7 +103,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           }}
         >
           <Image
-            data-aos='zoom-in-up'
+            data-aos="zoom-in-up"
             alt="illustration"
             src={isMobile ? heroIllustrationMb : heroIllustration}
             style={{
@@ -131,6 +135,7 @@ const HeroTextWrapper = styled("div")(() => ({
 
 const LogoWrapper = styled("div")(() => ({
   alignSelf: "flex-start",
+  cursor: "pointer",
 }));
 const HeroText = styled("div")(() => ({
   marginTop: "4rem",

@@ -51,16 +51,13 @@ export default function Home() {
                 src={arrowDown}
                 alt="arrow-down"
                 width={45}
-                className="animate__animated animate__bounce animate__infinite animate__slower"
+                className="scroll-arrow"
                 onClick={() => console.log("clicked")}
               />
             </ScrollIntoView>
           </ArrowDown>
         )}
-        <HowWeDeliver
-          isMobile={isMobile}
-          
-        />
+        <HowWeDeliver isMobile={isMobile} />
         <WhatWeDeliver isMobile={isMobile} />
         <Projects isMobile={isMobile} />
         <Crafts isMobile={isMobile} />

@@ -99,7 +99,7 @@ const HowWeDeliverWrapper = styled("div")(() => ({
 //   },
 // }));
 const ScrollTarget = styled("div")(() => ({
-  marginBottom: "-4rem",
+  marginBottom: "-2rem",
 }));
 
 // const SectionContent = styled("div")(() => ({

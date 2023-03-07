@@ -32,7 +32,16 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
           margin: "0 auto",
         }}
       >
-        <Image src={richocoSmBlack} alt="logo" />
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{ cursor: "pointer" }}
+        >
+
+        <Image
+          src={richocoSmBlack}
+          alt="logo"
+          />
+          </div>
         <Flex align="center" gap={isMobile ? "1.2rem" : "4rem"}>
           <p>Contact us</p>
           <Button
