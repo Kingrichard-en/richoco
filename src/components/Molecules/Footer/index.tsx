@@ -75,23 +75,43 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
               }}
             >
               <Image src={phone} alt="logo" style={{ marginRight: "12px" }} />
-              Nigeria +234 80 6077 1255
+              <a href="tel:+234 80 6077 1255">Nigeria +234 80 6077 1255</a>
             </p>
             <div
               style={{
                 margin: isMobile ? "30px" : "0 20px",
                 flexDirection: "row",
                 justifyContent: "inherit",
-                marginTop: isMobile ? "2rem" : "10px",
+                marginTop: "2.5rem",
               }}
             >
-              <Image
-                src={linkedin}
-                alt="logo"
-                width={90}
-                style={{ marginRight: isMobile ? "20px" : 0 }}
-              />
-              <Image src={ig} alt="logo" width={90} />
+              <div
+                style={{
+                  cursor: "pointer",
+                  marginRight: isMobile ? "20px" : 0,
+                }}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/company/richocostudio/",
+                    "_blank"
+                  )
+                }
+              >
+                <Image src={linkedin} alt="logo" width={90} style={{}} />
+              </div>
+              <div
+                style={{
+                  cursor: "pointer",
+                }}
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/richocostudio/",
+                    "_blank"
+                  )
+                }
+              >
+                <Image src={ig} alt="logo" width={90} />
+              </div>
             </div>
           </Flex>
         </div>
@@ -148,6 +168,7 @@ const MainFooter = styled("div")(() => ({
         "& img": {
           height: "2rem",
           paddingLeft: "1rem",
+          cursor: "pointer",
         },
         "&:first-of-type": {
           width: "4rem",
