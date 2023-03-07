@@ -45,6 +45,9 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             text="Go to instagram"
             border="1px solid #FFFFFF"
             borderRadius="28px"
+            onSubmit={() =>
+              window.open("https://www.instagram.com/richocostudio/", "_blank")
+            }
           />
         </TipsContent>
       </Tips>
