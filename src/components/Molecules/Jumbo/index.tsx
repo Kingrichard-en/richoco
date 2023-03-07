@@ -65,7 +65,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
               // data-aos-delay="500"
               onSubmit={() =>
                 window.open(
-                  "https://web.whatsapp.com/send?phone=2348060771255&text=",
+                  "https://web.whatsapp.com/send?phone=2348060771255&text=Richoco%20Studio%3A%20Tell%20us%20your%20bespoke%20idea%21",
                   "_blank"
                 )
               }

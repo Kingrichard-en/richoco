@@ -58,7 +58,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
             fontSize={isMobile ? "1.3rem" : "2rem"}
             onSubmit={() =>
               window.open(
-                "https://web.whatsapp.com/send?phone=2348060771255&text=",
+                "https://web.whatsapp.com/send?phone=2348060771255&text=Richoco%20Studio%3A%20Tell%20us%20your%20bespoke%20idea%21",
                 "_blank"
               )
             }
