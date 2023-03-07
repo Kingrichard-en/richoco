@@ -36,14 +36,19 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{ cursor: "pointer" }}
         >
-
-        <Image
-          src={richocoSmBlack}
-          alt="logo"
-          />
-          </div>
+          <Image src={richocoSmBlack} alt="logo" />
+        </div>
         <Flex align="center" gap={isMobile ? "1.2rem" : "4rem"}>
-          <p>Contact us</p>
+          <p
+            onClick={() =>
+              window.open(
+                "https://us10.list-manage.com/contact-form?u=72b160a86172e5fd4e66a28c5&form_id=1980ff014ed6ea7ec3dffbe211a3f143",
+                "_blank"
+              )
+            }
+          >
+            Contact us
+          </p>
           <Button
             text="Go bespoke!"
             color="#0A0A0A"
