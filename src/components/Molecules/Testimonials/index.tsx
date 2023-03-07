@@ -1,22 +1,18 @@
-import { Box, BoxProps, styled, Theme } from "@mui/material";
+import Flex from "@/components/Flex";
+import { BoxProps, styled, Theme } from "@mui/material";
+import { MUIStyledCommonProps } from "@mui/system";
+import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import avatar1 from "../../../assets/images/avatar1.png";
-import jude from "../../../assets/images/testimonials/jude.png";
-import freeman from "../../../assets/images/testimonials/freeman.png";
-import avatar2 from "../../../assets/images/avatar2.png";
+import "slick-carousel/slick/slick.css";
 import arrowLeft from "../../../assets/images/arrowLeft.svg";
 import arrowRight from "../../../assets/images/arrowRight.svg";
-import Flex from "@/components/Flex";
-import Image from "next/image";
-import { MUIStyledCommonProps } from "@mui/system";
+import freeman from "../../../assets/images/testimonials/freeman.png";
+import jude from "../../../assets/images/testimonials/jude.png";
+import amba from "../../../assets/images/testimonials/amba.png";
+import aastik from "../../../assets/images/testimonials/aastik.png";
 interface indexProps {
-  isMobile: boolean;
-}
-
-interface CustomComponentProps extends MUIStyledCommonProps<Theme> {
   isMobile: boolean;
 }
 
@@ -86,7 +82,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
       position: "Asst. V P at LegalPay",
       description:
         "Their design delivery style is fantastic and it really helped us all get on the same page from day one. Richard Enuenweisu's technical and commercial knowledge and his obvious design talent delivered a strong brand identity and a seamless UI beyond our expectation.",
-      avatar: avatar1,
+      avatar: aastik,
     },
     {
       id: 1,
@@ -94,7 +90,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
       position: "Founder & CEO at Basis Vectors",
       description:
         "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
-      avatar: avatar1,
+      avatar: amba,
     },
   ];
 
@@ -207,8 +203,8 @@ const SliderWrapper = styled("div", {
   "& .slick-slide": {
     "& div": {
       display: "flex",
-      alignSelf: "stretch",
       gap: "2rem",
+      height: '100%'
     },
     marginRight: "2rem",
   },
