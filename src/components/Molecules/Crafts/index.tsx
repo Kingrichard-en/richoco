@@ -13,18 +13,18 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
     <CraftWrapper
       style={{
         flexDirection: isMobile ? "column" : "row",
-        overflow:"hidden!important",
+        overflow: "hidden!important",
         // width: '100vw!important',
       }}
-      data-aos="fade-up"
     >
-      <SectionImage>
+      <SectionImage data-aos="fade-up">
         <Image src={elephant} alt="We craft growth-driven experience" />
       </SectionImage>
       <div
         style={{
           width: isMobile ? "90%" : "50%",
         }}
+        data-aos="fade-up"
       >
         <SectionTitle>We craft growth-driven experience</SectionTitle>
         <SectionDescription>
@@ -90,7 +90,7 @@ const SectionImage = styled("div")(() => ({
 // }));
 const SectionTitle = styled("div")(() => ({
   fontFamily: "'Avenir' sans-serif",
-  fontWeight: 900,
+  fontWeight: 700,
   fontSize: "4.8rem",
 }));
 const SectionDescription = styled("div")(() => ({

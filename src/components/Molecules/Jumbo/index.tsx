@@ -26,7 +26,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             <Image
               alt="Richoco"
               src={richocoSmBlack}
-              style={{cursor:'pointer'}}
+              style={{ cursor: "pointer" }}
             />
           </LogoWrapper>
         )}
@@ -61,7 +61,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
-            aos={{ "data-aos": "fade-right", "data-aos-delay": 600 }}
+            aos={{ "data-aos": "fade-right" }}
             data-aos-delay="500"
             onSubmit={() =>
               window.open(
@@ -78,7 +78,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             fontSize={isMobile ? "1.6rem" : "2rem"}
             width={isMobile ? "16rem" : "245px"}
             height={isMobile ? "4.8rem" : "56px"}
-            aos={{ "data-aos": "fade-left", "data-aos-delay": 600 }}
+            aos={{ "data-aos": "fade-left" }}
           />
         </HeroCTA>
         <SubTitleText

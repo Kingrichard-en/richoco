@@ -71,7 +71,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
       description:
         "An open, scalable any-to-any integration and workflow platform that enables secure communication",
       image: isMobile ? vorroMb : vorroCS,
-      url: "https://vorro.com",
+      url: "https://vorroconnect.com/",
     },
   ];
 
@@ -110,6 +110,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
               flexDirection: isMobile ? "column" : "row",
               height: isMobile ? "70rem" : "55rem",
             }}
+            data-aos='fade-up'
             >
             <section
               style={{
@@ -138,7 +139,6 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
             <Image
               src={project.image}
               alt={project.name}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               style={{
                 width: isMobile ? "100%" : "65%",
                 marginTop: isMobile ? "2rem" : 0,

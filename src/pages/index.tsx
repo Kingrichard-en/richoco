@@ -50,7 +50,7 @@ export default function Home() {
               <Image
                 src={arrowDown}
                 alt="arrow-down"
-                width={45}
+                width={48}
                 className="scroll-arrow"
                 onClick={() => console.log("clicked")}
               />

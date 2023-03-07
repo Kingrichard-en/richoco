@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import avatar1 from "../../../assets/images/avatar1.png";
+import jude from "../../../assets/images/testimonials/jude.png";
+import freeman from "../../../assets/images/testimonials/freeman.png";
 import avatar2 from "../../../assets/images/avatar2.png";
 import arrowLeft from "../../../assets/images/arrowLeft.svg";
 import arrowRight from "../../../assets/images/arrowRight.svg";
@@ -24,7 +26,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     autoplay: false,
     autoplaySpeed: 4300,
     // slidesToShow: 1,
-    // slidesToScroll: 1,
+    // slidesToScroll: .5,
     initialSlide: 0,
     // speed: 2000,
     slidesPerRow: isMobile ? 1 : 2,
@@ -62,106 +64,36 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
   const testimonials = [
     {
       id: 1,
-      name: "Meli Brono",
-      position: "Director at Spotify",
+      name: "Jude Onicha",
+      position: "Founder of Usecheckin",
       description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar1,
+        "Apart from being professional and highly creative, their team brought an approach we hadn't seen before. Always focused on data & results, Richoco had us work our concepts and vision backwards; designing for outcome. I Highly recommend them for any digital design work.",
+      avatar: jude,
     },
 
     {
       id: 2,
-      name: "Amalia Jo",
-      position: "CEO of ABC",
+      name: "Freeman Faithful",
+      position: "Co-Founder & CEO at StoVoo",
       description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar2,
+        "They take the time to listen and understand the project brief and then through workshops completely transform your idea into a visual identity. We hardly had to ask for any amends and completely fell in love with what they delivered from the get go. Their design process is faultless",
+      avatar: freeman,
     },
 
     {
       id: 3,
-      name: "John Doe",
-      position: "Director at Spotify",
+      name: "Aastik Saini",
+      position: "Asst. V P at LegalPay",
       description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
+        "Their design delivery style is fantastic and it really helped us all get on the same page from day one. Richard Enuenweisu's technical and commercial knowledge and his obvious design talent delivered a strong brand identity and a seamless UI beyond our expectation.",
       avatar: avatar1,
     },
     {
       id: 1,
-      name: "Melina Brono",
-      position: "Director at Spotify",
+      name: "Ambarish Gupta",
+      position: "Founder & CEO at Basis Vectors",
       description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar1,
-    },
-
-    {
-      id: 2,
-      name: "Amalia Brono",
-      position: "CEO of ABC",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar2,
-    },
-
-    {
-      id: 3,
-      name: "John Doe",
-      position: "Director at Spotify",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar1,
-    },
-    {
-      id: 1,
-      name: "Melina Brono",
-      position: "Director at Spotify",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar1,
-    },
-
-    {
-      id: 2,
-      name: "Amalia Brono",
-      position: "CEO of ABC",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar2,
-    },
-
-    {
-      id: 3,
-      name: "John Doe",
-      position: "Director at Spotify",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar1,
-    },
-    {
-      id: 1,
-      name: "Melina Brono",
-      position: "Director at Spotify",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar1,
-    },
-
-    {
-      id: 2,
-      name: "Amalia Brono",
-      position: "CEO of ABC",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-      avatar: avatar2,
-    },
-
-    {
-      id: 3,
-      name: "John Doe",
-      position: "Director at Spotify",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
+        "Loved working with Richard and the team. Always clear, professional, outstanding, friendly, clinical and creative, forward-thinking individuals who deliver results. Looking forward to working with them again in the future, it was an absolutely great experience.",
       avatar: avatar1,
     },
   ];
@@ -173,29 +105,28 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
         height: isMobile ? "75rem" : "auto",
         paddingLeft: "10%",
       }}
-      >
+    >
       {/* <div style={{}}> */}
       <h1
         style={{
           fontSize: isMobile ? "3.8rem" : "4.8rem",
-          fontWeight: 900,
+          fontWeight: 700,
         }}
-        >
+      >
         Job appreciations
       </h1>
-      <p
-      >
+      <p>
         From various startups and brands across mobile, web, web3, Fintech
         related projects.
       </p>
       <SliderWrapper
         style={{
           margin: isMobile ? "2rem 0" : "10rem 0",
-          
+
           // '& .slick-slide': {}
         }}
         isMobile={isMobile}
-        data-aos='fade-up'
+        data-aos="fade-up"
       >
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
@@ -276,6 +207,7 @@ const SliderWrapper = styled("div", {
   "& .slick-slide": {
     "& div": {
       display: "flex",
+      alignSelf: "stretch",
       gap: "2rem",
     },
     marginRight: "2rem",

@@ -26,22 +26,20 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
             style={{
               width: isMobile ? "100%" : "90%",
             }}
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-            // className="animate__animated animate__wobble"
+            data-aos="fade-up"
+            data-aos-duration="1500"
           />
         </div>
         <div
           style={{
             width: isMobile ? "90%" : "50%",
           }}
-          // className="animate__animated animate__backInRight"
-          data-aos='fade-left'
+          data-aos="fade-up"
+          data-aos-duration="1500"
         >
           <p
             style={{
-              fontWeight: 900,
+              fontWeight: 700,
               fontSize: isMobile ? "3.7rem" : "4.8rem",
             }}
           >
