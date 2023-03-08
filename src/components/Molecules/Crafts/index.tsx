@@ -27,7 +27,7 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
         data-aos="fade-up"
       >
         <SectionTitle>We craft growth-driven experience</SectionTitle>
-        <SectionDescription>
+        <SectionDescription style={{ maxWidth: isMobile ? '100%' : "70%" }} >
           Follow us on Instagram to get tips to help you grow your products
           learn more about our design process
         </SectionDescription>
@@ -105,7 +105,7 @@ const SectionDescription = styled("div")(() => ({
   fontWeight: 400,
   color: "#505050",
   fontSize: "1.8rem",
-  maxWidth: "70%",
+  
 }));
 const SubTitleText = styled("h4")(() => ({
   fontSize: "1.6rem",

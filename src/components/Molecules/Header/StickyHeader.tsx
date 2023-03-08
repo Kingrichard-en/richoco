@@ -46,6 +46,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ sticky }) => {
                 "_blank"
               )
             }
+            style={{ fontSize: isMobile ? "1.3rem" : "2rem", whiteSpace: 'nowrap' }}
           >
             Contact us
           </p>
@@ -83,12 +84,14 @@ const StickyHeaderWrapper = styled("div")(({}) => ({
 
   // "& > div": {
   "&  p": {
-    fontSize: "2rem",
     fontFamily: "'Avenir', roboto",
-    fontWeight: "400",
+    fontWeight: "500",
     cursor: "pointer",
     // },
   },
+  '& img': {
+    width: '90%'
+  }
 }));
 
 export default StickyHeader;

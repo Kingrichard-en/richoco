@@ -14,7 +14,10 @@ interface indexProps {
 
 export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
   return (
-    <Flex direction={isMobile ? "column" : "row"}>
+    <Flex
+      direction={isMobile ? "column" : "row"}
+      style={{ overflow: "hidden" }}
+    >
       <HeroTextWrapper
         style={{
           width: isMobile ? "100%" : "50%",
@@ -39,10 +42,15 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             }}
           />
         </HeroText>
-        <div data-aos="fade-up">
+        <div
+          data-aos="fade-up"
+          style={{
+            // paddingLeft: isMobile ? "12%" : "0",
+            width: isMobile ? "90%" : "auto",
+          }}
+        >
           <HeroSubText
             style={{
-              width: isMobile ? "90%" : "auto",
               fontSize: isMobile ? "1.6rem" : "2rem",
             }}
           >
@@ -59,7 +67,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
               background="#0A0A0A"
               borderRadius="28px"
               fontSize={isMobile ? "1.6rem" : "2rem"}
-              width={isMobile ? "16rem" : "245px"}
+              width={isMobile ? "100%" : "245px"}
               height={isMobile ? "4.8rem" : "56px"}
               // aos={{ "data-aos": "fade-right" }}
               // data-aos-delay="500"
@@ -76,7 +84,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
               color="#0A0A0A"
               borderRadius="28px"
               fontSize={isMobile ? "1.6rem" : "2rem"}
-              width={isMobile ? "16rem" : "245px"}
+              width={isMobile ? "18rem" : "245px"}
               height={isMobile ? "4.8rem" : "56px"}
               // aos={{ "data-aos": "fade-left" }}
               onSubmit={() =>
@@ -110,7 +118,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           }}
         >
           <Image
-            data-aos="zoom-in-up"
+            data-aos={isMobile ? "fade-up" : "zoom-in-up"}
             alt="illustration"
             src={isMobile ? heroIllustrationMb : heroIllustration}
             style={{
@@ -162,6 +170,7 @@ const HeroIllustration = styled("div")(() => ({
   margin: "0 auto",
   height: "102%",
   width: "100%",
+  overflow: "hidden",
 }));
 
 const HeroSubText = styled("p")(() => ({

@@ -33,7 +33,8 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
       }}
     >
       <CardTitle style={{
-        color: textColor
+        color: textColor,
+        fontSize: isMobile ? "3.2rem" : "4.8rem",
       }}>{title}</CardTitle>
       <p>{description}</p>
 

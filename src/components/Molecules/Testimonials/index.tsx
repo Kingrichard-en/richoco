@@ -12,6 +12,7 @@ import freeman from "../../../assets/images/testimonials/freeman.png";
 import jude from "../../../assets/images/testimonials/jude.png";
 import amba from "../../../assets/images/testimonials/amba.png";
 import aastik from "../../../assets/images/testimonials/aastik.png";
+import MobileCarousel from "./Carousels";
 interface indexProps {
   isMobile: boolean;
 }
@@ -129,7 +130,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
   return (
     <TestimonialsWrapper
       style={{
-        height: isMobile ? "75rem" : "auto",
+        // height: isMobile ? "75rem" : "auto",
         padding: isMobile ? "5rem 0 0 0" : "10rem 0 10rem 0",
       }}
     >
@@ -151,41 +152,49 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
           related projects.
         </p>
       </div>
-      <SliderWrapper
-        style={{
-          margin: isMobile ? "2rem 0" : "10rem 0",
+      {!isMobile ? (
+        <SliderWrapper
+          style={{
+            margin: isMobile ? "2rem 0" : "10rem 0",
 
-          paddingBottom: "10rem",
-          paddingLeft: currentSlide === 0 ? "10%" : "0",
-          // '& .slick-slide': {}
-        }}
-        isMobile={isMobile}
-        data-aos="fade-up"
-      >
-        <Slider {...settings}>
-          {testimonials.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial.id}
-              isMobile={isMobile}
-              data-index={testimonial.id}
-              onDrag={(e) => console.log('esdfsdf: ', e)}
-            >
-              <Flex align="center" gap="1.2rem" direction="row">
-                <Image src={testimonial.avatar} alt="testimonial" width={60} />
-                <Flex direction="column" gap=".1rem">
-                  <h3 style={{ fontSize: isMobile ? "1.8rem" : "2rem" }}>
-                    {testimonial.name}
-                  </h3>
-                  <h5>{testimonial.position}</h5>
+            paddingBottom: "10rem",
+            paddingLeft: currentSlide === 0 ? "10%" : "0",
+            // '& .slick-slide': {}
+          }}
+          isMobile={isMobile}
+          data-aos="fade-up"
+        >
+          <Slider {...settings}>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.id}
+                isMobile={isMobile}
+                data-index={testimonial.id}
+                onDrag={(e) => console.log("esdfsdf: ", e)}
+              >
+                <Flex align="center" gap="1.2rem" direction="row">
+                  <Image
+                    src={testimonial.avatar}
+                    alt="testimonial"
+                    width={60}
+                  />
+                  <Flex direction="column" gap=".1rem">
+                    <h3 style={{ fontSize: isMobile ? "1.8rem" : "2rem" }}>
+                      {testimonial.name}
+                    </h3>
+                    <h5>{testimonial.position}</h5>
+                  </Flex>
                 </Flex>
-              </Flex>
-              <p style={{ fontSize: isMobile ? "1.6rem" : "2rem" }}>
-                {testimonial.description}
-              </p>
-            </TestimonialCard>
-          ))}
-        </Slider>
-      </SliderWrapper>
+                <p style={{ fontSize: isMobile ? "1.6rem" : "2rem" }}>
+                  {testimonial.description}
+                </p>
+              </TestimonialCard>
+            ))}
+          </Slider>
+        </SliderWrapper>
+      ) : (
+        <MobileCarousel testimonials={testimonials} isMobile={isMobile} />
+      )}
       {/* </div> */}
     </TestimonialsWrapper>
   );

@@ -16,6 +16,7 @@ interface ButtonProps {
   border?: string;
   fontFamily?: string;
   aos?: object;
+  styles?: object;
 }
 const Button: React.FC<ButtonProps> = ({
   text,
@@ -31,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   borderRadius,
   fontFamily,
   aos,
-  ...styles
+  styles
 }) => {
   const Btnstyles = {
     background: background,
@@ -41,6 +42,7 @@ const Button: React.FC<ButtonProps> = ({
     fontSize: fontSize || "2rem",
     fontFamily: fontFamily || "'Avenir' sans-serif!important",
     borderRadius: borderRadius || "0px",
+    paddding: "0 6rem",
     fontWeight: "500",
     border: border || "1px solid #0A0A0A",
     ...styles,
