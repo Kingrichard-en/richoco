@@ -1,7 +1,7 @@
 import Flex from "@/components/Flex";
 import { BoxProps, styled } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import arrowLeft from "../../../assets/images/arrowLeft.svg";
 import arrowRight from "../../../assets/images/arrowRight.svg";
@@ -17,7 +17,10 @@ interface testimonial {
   description: string;
   avatar: StaticImageData;
 }
-const settings = (isMobile: boolean) => {
+const settings = (
+  isMobile: boolean,
+  setCurrentSlide: React.Dispatch<React.SetStateAction<number>>
+) => {
   return {
     // slidesToShow: 1,
     // slidesToScroll: 2,
@@ -30,6 +33,7 @@ const settings = (isMobile: boolean) => {
     infinite: false,
     // centerMode: true,
     // centerPadding: "80%",
+    beforeChange: (_: number, next: number) => setCurrentSlide(next),
     prevArrow: (
       <div>
         <Image
@@ -50,6 +54,7 @@ export const MobileCarousel: React.FC<CarouselsProps> = ({
   testimonials,
   isMobile,
 }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   return (
     <SliderWrapper
       style={{
@@ -60,15 +65,14 @@ export const MobileCarousel: React.FC<CarouselsProps> = ({
         // '& .slick-slide': {}
       }}
       isMobile={isMobile}
-      // data-aos="fade-up"
+      data-aos="fade-up"
     >
-      <Slider {...settings(isMobile)}>
+      <Slider {...settings(isMobile, setCurrentSlide)}>
         {testimonials.map((testimonial) => (
           <TestimonialCard
             key={testimonial.id}
             isMobile={isMobile}
             data-index={testimonial.id}
-            onClick={(e) => console.log("esdfsdf: ", e)}
           >
             <Flex align="center" gap="1.2rem" direction="row">
               <Image src={testimonial.avatar} alt="testimonial" width={60} />
@@ -140,6 +144,10 @@ const SliderWrapper = styled("div", {
       //     gap: "2rem",
       height: "100%",
       minWidth: isMobile ? "100%!important" : "100%",
+    },
+
+    "&:first-of-type": {
+      marginLeft: isMobile ? "2rem!important" : "0",
     },
     //   marginRight: "2rem",
   },
