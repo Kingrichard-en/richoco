@@ -61,7 +61,6 @@ export const MobileCarousel: React.FC<CarouselsProps> = ({
         margin: isMobile ? "2rem  0 0" : "10rem 0",
 
         paddingBottom: "10rem",
-        paddingLeft: isMobile ? "0" : "10%",
         // '& .slick-slide': {}
       }}
       isMobile={isMobile}
@@ -126,22 +125,17 @@ const arrowStyles = (isMobile: boolean) => {
 const SliderWrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile",
 })<BoxProps & { isMobile: boolean }>(({ isMobile }) => ({
-  //   width: '90%!important',
   ".slick-track": {
-    // width: "100%!important",
     display: "flex",
-    gap: "2rem",
+    gap:  "1rem",
   },
   "& .slick-list": {
     padding: "0!important",
   },
   "& .slick-slide": {
-    //   minWidth: isMobile ? "350px!important" : "100%",
 
     "& div": {
-      //     margin: "0 2rem!important",
       display: "flex",
-      //     gap: "2rem",
       height: "100%",
       minWidth: isMobile ? "100%!important" : "100%",
     },
@@ -149,7 +143,6 @@ const SliderWrapper = styled("div", {
     "&:first-of-type": {
       marginLeft: isMobile ? "2rem!important" : "0",
     },
-    //   marginRight: "2rem",
   },
   ".slick-prev": {
     ...arrowStyles(isMobile),
@@ -159,11 +152,9 @@ const SliderWrapper = styled("div", {
     left: isMobile ? "52%!important" : "48% !important",
     ...arrowStyles(isMobile),
   },
-  // ".slick-slide.slick-active.slick-center.slick-current": {
-  //   minWidth: isMobile ? "350px!important" : "100%",
-  //   // marginLeft: isMobile ? "2rem!important" : "0",
-  // },
-  // },
+  '.slick-slide:first-of-type': {
+    marginLeft: '1rem!important'
+  }
 })) as any;
 
 const TestimonialCard = styled("div", {
@@ -174,6 +165,7 @@ const TestimonialCard = styled("div", {
   padding: isMobile ? "1rem" : "3rem",
   borderRadius: "8px",
   overflow: "hidden",
+  height: "max-content",
   //   width: "40%!important",
   "& h3": {
     fontWeight: 700,

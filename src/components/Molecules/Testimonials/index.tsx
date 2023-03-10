@@ -136,7 +136,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
     >
       <div
         style={{
-          paddingLeft: "10%",
+          paddingLeft: isMobile ? '5%' : "10%",
         }}
       >
         <h1
@@ -158,7 +158,7 @@ export const Testimonials: React.FC<indexProps> = ({ isMobile }) => {
             margin: isMobile ? "2rem 0" : "10rem 0",
 
             paddingBottom: "10rem",
-            paddingLeft: currentSlide === 0 ? "10%" : "0",
+            paddingLeft: currentSlide === 0 ? "5%" : "0",
             // '& .slick-slide': {}
           }}
           isMobile={isMobile}
