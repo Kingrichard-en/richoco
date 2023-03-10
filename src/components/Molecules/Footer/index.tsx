@@ -30,7 +30,7 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             data-aos="fade-up"
           />
         </div>
-        <TipsContent data-aos="fade-up">
+        <div data-aos="fade-up" style={{ paddingLeft: isMobile ? "3rem" : 0 }}>
           <Image
             src={instalogo}
             alt="design tips and case studies"
@@ -49,10 +49,10 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
               window.open("https://www.instagram.com/richocostudio/", "_blank")
             }
           />
-        </TipsContent>
+        </div>
       </Tips>
       <MainFooter
-        style={{ padding: isMobile ? "7rem 4rem" : "20rem 20rem 2rem" }}
+        style={{ padding: isMobile ? "7rem 4rem 0" : "20rem 20rem 2rem" }}
       >
         <div data-aos="fade-up">
           <Image
@@ -61,6 +61,7 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             width={isMobile ? 350 : 600}
             style={{
               marginBottom: isMobile ? "5rem" : "10rem",
+              width: isMobile ? "100%" : "auto",
             }}
           />
           <p style={{ marginBottom: isMobile ? "6rem" : "0" }}>
@@ -81,13 +82,13 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
                 src={phone}
                 alt="logo"
                 width={15}
-                style={{ marginRight: "12px", marginBottom: "-4px"}}
+                style={{ marginRight: "12px", marginBottom: "-4px" }}
               />
               <a href="tel:+234 80 6077 1255">Nigeria +234 80 6077 1255</a>
             </p>
             <div
               style={{
-                margin: isMobile ? "30px" : "0 20px",
+                margin: isMobile ? "30px 30px 0" : "0 20px",
                 flexDirection: "row",
                 justifyContent: "inherit",
                 marginTop: "2.5rem",
@@ -205,8 +206,8 @@ const TipsText = styled("h1")(() => ({
   maxWidth: "70%",
 }));
 
-const TipsContent = styled("div")(() => ({
-  // width: '50%'
-}));
+// const TipsContent = styled("div")(() => ({
+//   paddingLeft: "10rem",
+// }));
 
 export default Footer;

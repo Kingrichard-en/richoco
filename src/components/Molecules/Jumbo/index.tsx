@@ -7,7 +7,7 @@ import heroIllustration from "../../../assets/images/hero-illustration.svg";
 import heroJumbo from "../../../assets/images/hero-jumbo-text.svg";
 import richocoSmBlack from "../../../assets/images/logo-sm-black.svg";
 import Button from "../../Button";
-
+import heroJumboMobile from "../../../assets/images/hero-jumbo-text-mb.svg";
 interface indexProps {
   isMobile: boolean;
 }
@@ -36,10 +36,10 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
         <HeroText data-aos="fade-down">
           <Image
             alt="Brin in the idea"
-            src={heroJumbo}
-            style={{
-              margin: isMobile ? "-10rem 1rem -8rem 1rem" : "0",
-            }}
+            src={isMobile ? heroJumboMobile : heroJumbo}
+            // style={{
+            //   margin: isMobile ? "-10rem 1rem -8rem 1rem" : "0",
+            // }}
           />
         </HeroText>
         <div
@@ -52,25 +52,20 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           <HeroSubText
             style={{
               fontSize: isMobile ? "1.6rem" : "2rem",
+              marginTop: isMobile ? 0 : "-5rem",
             }}
           >
             User experience is everything. It always has been. Dream big on your
             idea leave the brain work to us. we believe in product led growth!.
           </HeroSubText>
-          <HeroCTA
-            style={{
-              width: isMobile ? "90%" : "100%",
-            }}
-          >
+          <div style={{ display: "flex", gap: "2rem", marginTop: "4rem" }}>
             <Button
               text="Go bespoke!"
               background="#0A0A0A"
               borderRadius="28px"
               fontSize={isMobile ? "1.6rem" : "2rem"}
-              width={isMobile ? "100%" : "245px"}
+              width={isMobile ? "16rem" : "245px"}
               height={isMobile ? "4.8rem" : "56px"}
-              // aos={{ "data-aos": "fade-right" }}
-              // data-aos-delay="500"
               onSubmit={() =>
                 window.open(
                   "https://web.whatsapp.com/send?phone=2348060771255&text=Richoco%20Studio%3A%20Tell%20us%20your%20bespoke%20idea%21",
@@ -84,9 +79,8 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
               color="#0A0A0A"
               borderRadius="28px"
               fontSize={isMobile ? "1.6rem" : "2rem"}
-              width={isMobile ? "18rem" : "245px"}
+              width={isMobile ? "16rem" : "245px"}
               height={isMobile ? "4.8rem" : "56px"}
-              // aos={{ "data-aos": "fade-left" }}
               onSubmit={() =>
                 window.open(
                   "https://us10.list-manage.com/contact-form?u=72b160a86172e5fd4e66a28c5&form_id=1980ff014ed6ea7ec3dffbe211a3f143",
@@ -94,7 +88,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
                 )
               }
             />
-          </HeroCTA>
+          </div>
         </div>
         <SubTitleText
           style={{
@@ -154,6 +148,8 @@ const LogoWrapper = styled("div")(() => ({
 }));
 const HeroText = styled("div")(() => ({
   marginTop: "4rem",
+  width: "100%",
+  height: "100%",
   "& img": {
     width: "91%",
   },
@@ -176,16 +172,17 @@ const HeroIllustration = styled("div")(() => ({
 const HeroSubText = styled("p")(() => ({
   lineHeight: "2.3rem",
   textAlign: "left",
-  marginTop: "-5rem",
   color: "#505050",
 }));
-const HeroCTA = styled("div")(() => ({
-  display: "flex",
-  //   justifyContent: "space-between",
-  gap: "3rem",
+// const HeroCTA = styled("div",
 
-  marginTop: "4rem",
-}));
+// )(({}) => ({
+//   display: "flex",
+//   //   justifyContent: "space-between",
+//   gap: "3rem",
+
+//   marginTop: "4rem",
+// }));
 
 const SubTitleText = styled("h4")(() => ({
   textAlign: "left",

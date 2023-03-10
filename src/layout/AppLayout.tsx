@@ -11,6 +11,8 @@ const PageBody = styled("div")(() => ({
   height: "100vh",
   // width: "100vw",
   // overflowX: "hidden",
+  maxWidth: '1700px',
+  margin: '0 auto',
 }));
 
 export const Applayout: React.FC<ApplayoutProps> = ({ children, titleTag }) => {
