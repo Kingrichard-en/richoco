@@ -51,7 +51,7 @@ export const HowWeDeliver: React.FC<indexProps> = ({ isMobile }) => {
               fontFamily: "'Avenir' sans-serif",
               fontWeight: 400,
               color: "#505050",
-              fontSize: isMobile ? "1.6rem" : "2rem",
+              fontSize: "2rem",
               lineHeight: "2.6rem",
             }}
           >

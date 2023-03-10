@@ -17,8 +17,12 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
         // width: '100vw!important',
       }}
     >
-      <SectionImage data-aos="fade-up">
-        <Image src={elephant} alt="We craft growth-driven experience" />
+      <SectionImage data-aos="fade-up" style={{ margin: "0 auto" }}>
+        <Image
+          src={elephant}
+          alt="We craft growth-driven experience"
+          style={{ width: isMobile ? "85%" : "370px", height: "100%" }}
+        />
       </SectionImage>
       <div
         style={{
@@ -27,7 +31,7 @@ export const Crafts: React.FC<indexProps> = ({ isMobile }) => {
         data-aos="fade-up"
       >
         <SectionTitle>We craft growth-driven experience</SectionTitle>
-        <SectionDescription style={{ maxWidth: isMobile ? '100%' : "70%" }} >
+        <SectionDescription style={{ maxWidth: isMobile ? "100%" : "70%" }}>
           Follow us on Instagram to get tips to help you grow your products
           learn more about our design process
         </SectionDescription>
@@ -85,10 +89,10 @@ const CraftWrapper = styled("div")(() => ({
   // marginTop: "15rem",
 }));
 const SectionImage = styled("div")(() => ({
-  "& img": {
-    width: "370px",
-    height: "280px",
-  },
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  
 }));
 
 // const SectionContent = styled("div")(() => ({
@@ -105,7 +109,6 @@ const SectionDescription = styled("div")(() => ({
   fontWeight: 400,
   color: "#505050",
   fontSize: "1.8rem",
-  
 }));
 const SubTitleText = styled("h4")(() => ({
   fontSize: "1.6rem",

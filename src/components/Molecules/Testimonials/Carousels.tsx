@@ -134,6 +134,7 @@ const SliderWrapper = styled("div", {
   },
   "& .slick-slide": {
     height: "100%",
+    borderRadius: "8px",
     background: 'white',
     "& div": {
       display: "flex",

@@ -57,7 +57,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           <HeroSubText
             style={{
               fontSize: isMobile ? "1.6rem" : "2rem",
-              marginTop: isMobile ? 0 : "-5rem",
+              // marginTop: isMobile ? '0!important' : "-5rem",
             }}
           >
             User experience is everything. It always has been. Dream big on your
