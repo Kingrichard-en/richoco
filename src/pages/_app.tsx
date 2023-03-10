@@ -27,7 +27,11 @@ export default function MyApp(props: MyAppProps) {
     });
     if (typeof window !== "undefined") {
       const loader = document.getElementById("globalLoader");
-      if (loader) loader.style.display = "none";
+      const style = document.getElementById("loaderStyles");
+      if (loader && style) {
+        loader.remove();
+        style.remove();
+      }
     }
   }, []);
 

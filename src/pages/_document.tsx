@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="icon" href="/rlogo.jpeg" />
-          <style>{Loader}</style>
+          <style id='loaderStyles'>{Loader}</style>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
           <div id="globalLoader">
             <svg viewBox="0 0 1320 300">
               <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                RICHOCO
+                MERCY
               </text>
             </svg>
           </div>
