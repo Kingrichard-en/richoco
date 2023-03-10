@@ -7,7 +7,7 @@ import heroIllustration from "../../../assets/images/hero-illustration.svg";
 import heroJumbo from "../../../assets/images/hero-jumbo-text.svg";
 import richocoSmBlack from "../../../assets/images/logo-sm-black.svg";
 import Button from "../../Button";
-import heroJumboMobile from "../../../assets/images/hero-jumbo-text-mb.svg";
+import heroJumboMobile from "../../../assets/images/hero-jumbo-text-mb.png";
 interface indexProps {
   isMobile: boolean;
 }
@@ -40,6 +40,11 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             // style={{
             //   margin: isMobile ? "-10rem 1rem -8rem 1rem" : "0",
             // }}
+            style={{
+              width: "90%",
+              paddingLeft: isMobile ? '5%' : '0',
+              height: "auto",
+            }}
           />
         </HeroText>
         <div
@@ -150,9 +155,6 @@ const HeroText = styled("div")(() => ({
   marginTop: "4rem",
   width: "100%",
   height: "100%",
-  "& img": {
-    width: "91%",
-  },
 }));
 
 const HeroIllustrationWrapper = styled("div")(() => ({
