@@ -22,17 +22,17 @@ const settings = (
   setCurrentSlide: React.Dispatch<React.SetStateAction<number>>
 ) => {
   return {
-    // slidesToShow: 1,
+    slidesToShow: 1,
     // slidesToScroll: 2,
-    // slidesToRow: 1,
+    slidesToRow: 1,
     initialSlide: 0,
-    speed: 2000,
-    slidesPerRow: isMobile ? 1 : 2,
+    speed: 1000,
+    slidesPerRow: 1,
     adaptiveHeight: true,
     accessibility: true,
     infinite: false,
     // centerMode: true,
-    // centerPadding: "80%",
+    // centerPadding: "20%",
     beforeChange: (_: number, next: number) => setCurrentSlide(next),
     prevArrow: (
       <div>
@@ -133,7 +133,8 @@ const SliderWrapper = styled("div", {
     padding: "0!important",
   },
   "& .slick-slide": {
-
+    height: "100%",
+    background: 'white',
     "& div": {
       display: "flex",
       height: "100%",
