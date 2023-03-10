@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
           <div id="globalLoader">
             <svg viewBox="0 0 1320 300">
               <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                MERCY
+                RICHOCO
               </text>
             </svg>
           </div>

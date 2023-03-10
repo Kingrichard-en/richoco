@@ -81,7 +81,7 @@ export const Projects: React.FC<indexProps> = ({ isMobile }) => {
         <h1
           style={{
             fontSize: isMobile ? "4rem" : "4.8rem",
-            width: isMobile ? "60%" : "100%",
+            // width: isMobile ? "60%" : "100%",
             margin: "0 auto",
           }}
         >
