@@ -20,6 +20,7 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
       <Tips
         style={{
           flexDirection: isMobile ? "column" : "row",
+          padding: isMobile ? '10rem 0' : "10rem",
         }}
       >
         <div>
@@ -30,7 +31,7 @@ export const Footer: React.FC<indexProps> = ({ isMobile }) => {
             data-aos="fade-up"
           />
         </div>
-        <div data-aos="fade-up" style={{ paddingLeft: isMobile ? "3rem" : 0 }}>
+        <div data-aos="fade-up" style={{ paddingLeft: isMobile ? "1rem" : 0 }}>
           <Image
             src={instalogo}
             alt="design tips and case studies"
@@ -139,10 +140,10 @@ const FooterWrapper = styled("div")(() => ({
 }));
 
 const Tips = styled("div")(() => ({
-  padding: "10rem",
   display: "flex",
   alignItems: "center",
   gap: "10rem",
+  maxWidth: "90%",
 }));
 const MainFooter = styled("div")(() => ({
   background: "#0A0A0A",
@@ -203,7 +204,7 @@ const TipsText = styled("h1")(() => ({
   fontWeight: 300,
   color: "#fff",
   margin: "4rem 0",
-  maxWidth: "70%",
+  // maxWidth: "70%",
 }));
 
 // const TipsContent = styled("div")(() => ({

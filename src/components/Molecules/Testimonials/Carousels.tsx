@@ -127,7 +127,7 @@ const SliderWrapper = styled("div", {
 })<BoxProps & { isMobile: boolean }>(({ isMobile }) => ({
   ".slick-track": {
     display: "flex",
-    gap:  "1rem",
+    gap:  "3rem",
   },
   "& .slick-list": {
     padding: "0!important",
@@ -154,7 +154,7 @@ const SliderWrapper = styled("div", {
     ...arrowStyles(isMobile),
   },
   '.slick-slide:first-of-type': {
-    marginLeft: '1rem!important'
+    marginLeft: '-1rem!important'
   }
 })) as any;
 
@@ -163,7 +163,7 @@ const TestimonialCard = styled("div", {
 })<BoxProps & { isMobile: boolean }>(({ isMobile }) => ({
   cursor: "move",
   background: "#fff",
-  padding: isMobile ? "1rem" : "3rem",
+  padding: isMobile ? "2rem" : "3rem",
   borderRadius: "8px",
   overflow: "hidden",
   height: "max-content",
