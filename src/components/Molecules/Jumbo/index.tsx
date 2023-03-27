@@ -42,7 +42,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
             // }}
             style={{
               width: "90%",
-              paddingLeft: isMobile ? '5%' : '0',
+              paddingLeft: isMobile ? "5%" : "0",
               height: "auto",
             }}
           />
@@ -51,7 +51,7 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
           data-aos="fade-up"
           style={{
             // paddingLeft: isMobile ? "12%" : "0",
-            width: isMobile ? "90%" : "auto",
+            width: isMobile ? "90%" : "-webkit-fill-available",
           }}
         >
           <HeroSubText
@@ -60,8 +60,9 @@ export const HomePageHero: React.FC<indexProps> = ({ isMobile }) => {
               // marginTop: isMobile ? '0!important' : "-5rem",
             }}
           >
-            User experience is everything. It always has been. Dream big on your
-            idea leave the brain work to us. we believe in product led growth!.
+            Richard Enuenweisu is a Co-founder and a Senior Product Designer who
+            believes in Product-Led Growth. Dream big on your ideas and leave
+            the brain work to us.
           </HeroSubText>
           <div style={{ display: "flex", gap: "2rem", marginTop: "4rem" }}>
             <Button

@@ -51,7 +51,7 @@ export const DeliverCard: React.FC<DeliverCardProps> = ({
 };
 
 const DeliverCardWrapper = styled("div")(({}) => ({
-  
+  minWidth: 'min-content',
   "& p": {
     fontSize: "1.8rem",
     fontWeight: 400,
